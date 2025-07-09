@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grupo AR | Construcción y Franquicias</title>
+  <title>Grupo AR | Solución Integral de Construcción</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -15,6 +15,7 @@
       --concreto: #e3e5e8;
       --rojo: #c4231a;
       --shadow: 0 6px 32px #14405c25;
+      --gris: #b8bcc3;
     }
     html,body {margin:0;padding:0;}
     body {
@@ -24,147 +25,181 @@
       min-height: 100vh;
       letter-spacing:.03em;
     }
-    /* ====== HERO HEADER IMPACTO ====== */
+    .wrapper { max-width:1100px; margin:0 auto; }
+    /* ====== HERO ====== */
     .hero {
       background: linear-gradient(105deg, var(--azul) 70%, var(--acero) 120%);
       position: relative;
-      min-height: 60vh;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      top: -180px; left: -80px;
-      width: 130vw; height: 160vw;
-      background: repeating-linear-gradient(120deg, #b0b4bd11 0 10px, transparent 10px 22px);
-      opacity: 0.22;
-      pointer-events: none;
-      z-index: 1;
+      min-height: 55vh;
+      display: flex; align-items: flex-end; justify-content: center; overflow: hidden; box-shadow: var(--shadow);
     }
     .hero-inner {
       width: 100%;
       max-width: 1100px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
       z-index: 3;
-      padding: 20px 3vw 0 3vw;
+      padding: 22px 3vw 0 3vw;
       position: relative;
     }
-    .hero-video-mobile {
-      display:none;
-    }
     .hero-info {
-      flex:1 1 380px;
-      z-index:4;
-      color: #fff;
-      margin-bottom: 40px;
-      animation: fadeInDown .8s;
+      flex:1 1 410px; z-index:4; color: #fff; margin-bottom: 45px; animation: fadeInDown .8s;
     }
     @keyframes fadeInDown { from {opacity:0; transform:translateY(-45px);} to {opacity:1; transform:none;} }
     .hero-title {
-      font-family: 'Oswald', 'Inter', Arial, sans-serif;
-      font-size: 2.3em;
-      font-weight: 900;
-      color: var(--dorado);
+      font-family: 'Oswald', 'Inter', Arial, sans-serif; font-size: 2.3em; font-weight: 900;
+      color: var(--dorado); text-shadow: 0 2px 18px #12223e59;
+      margin-bottom: 10px; line-height:1.13; text-transform: uppercase;
       letter-spacing: .09em;
-      text-shadow: 0 2px 18px #12223e59;
-      margin-bottom: 12px;
-      line-height:1.13;
-      text-transform: uppercase;
-    }
-    .hero-tag {
-      font-size:1.09em;
-      color: #e8e4d4;
-      margin-bottom:11px;
-      letter-spacing:.05em;
     }
     .hero-desc {
-      background: rgba(27,44,67,0.53);
+      background: rgba(27,44,67,0.54);
       border-radius: 15px;
-      padding: 13px 19px;
-      font-size: 1.17em;
-      margin-bottom: 16px;
+      padding: 13px 17px;
+      font-size: 1.18em;
+      margin-bottom: 18px;
       color: #fff;
       box-shadow: 0 3px 14px #0003;
       max-width: 470px;
       font-weight:500;
     }
     .hero-points {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
+      display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 15px;
     }
     .hero-points span {
-      font-size: 1em;
-      color: #fff;
+      font-size: 1em; color: #fff;
       background: rgba(17,28,44,0.13);
       border-radius: 12px;
-      padding: 6px 16px 6px 11px;
-      font-weight: 600;
-      display: flex; align-items: center; gap: 7px;
+      padding: 7px 16px 7px 11px;
+      font-weight: 600; display: flex; align-items: center; gap: 7px;
       box-shadow: 0 1px 5px #0001;
-    }
-    .hero-points span:before {
-      content: "🔨";
-      color: var(--dorado);
-      font-size: 1.13em;
-      margin-right: 3px;
     }
     .hero-btn {
       background: linear-gradient(90deg, var(--dorado), var(--rojo) 92%);
-      color: #fff;
-      font-size: 1.15em;
-      font-weight: 800;
-      border: none;
-      border-radius: 11px;
-      padding: 13px 32px;
-      margin-right: 10px;
-      text-decoration: none;
-      letter-spacing: .07em;
-      transition: background .16s, transform .09s;
-      box-shadow: 0 4px 16px #d2b3643d;
-      display: inline-block;
-      margin-top:8px;
+      color: #fff; font-size: 1.09em; font-weight: 800;
+      border: none; border-radius: 10px; padding: 12px 27px; text-decoration: none;
+      letter-spacing: .07em; box-shadow: 0 4px 16px #d2b3643d; margin-top:7px;
+      transition: background .15s, transform .09s;
       text-shadow:0 2px 8px #6e623d2e;
     }
     .hero-btn:hover { background: var(--azul2);}
     .hero-media {
-      flex:0 0 420px;
-      z-index:4;
-      margin-top: 40px;
-      margin-bottom: 35px;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      flex:0 0 410px; z-index:4; margin-top: 40px; margin-bottom: 35px;
+      display: flex; justify-content: flex-end; align-items: center;
       animation: fadeInRight 1.1s;
     }
     @keyframes fadeInRight { from{opacity:0;transform:translateX(70px);} to{opacity:1;transform:none;} }
     .hero-video {
-      border-radius: 30px;
+      border-radius: 27px;
       box-shadow: 0 8px 46px #192a3d42, 0 0 0 8px #e9c98244;
-      max-width: 410px;
-      min-width: 240px;
+      max-width: 410px; min-width: 240px;
       border: 5px solid var(--dorado);
+      background: #fff; aspect-ratio: 16/9; outline: 2.5px solid #d9c28c;
+    }
+    .hero-video-mobile { display:none; }
+    /* ===== POR QUÉ GRUPO AR ===== */
+    .porque-ar {
+      background: var(--concreto);
+      border-radius: 16px;
+      margin: 30px 0 15px 0;
+      padding: 27px 18px 14px 18px;
+      box-shadow: 0 4px 18px #b0b0c82a;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px 20px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .porque-block {
+      flex: 1 1 280px;
+      min-width: 220px; max-width: 340px;
       background: #fff;
-      aspect-ratio: 16/9;
-      outline: 2.5px solid #d9c28c;
+      border-radius: 13px;
+      padding: 20px 17px 14px 17px;
+      box-shadow: 0 3px 12px #c9b36d24;
+      border: 1.6px solid var(--gris);
+      display: flex; flex-direction: column; align-items: flex-start;
     }
-    /* ===== GALERIA PRO ===== */
-    .galeria {
-      margin-top:20px;
+    .porque-block-title {
+      font-family: Oswald,sans-serif;
+      color: var(--azul2);
+      font-weight:700;
+      font-size: 1.12em;
+      margin-bottom: 7px;
+      letter-spacing:.05em;
+      text-transform:uppercase;
     }
+    .porque-block-list {
+      padding-left: 19px; margin: 0 0 7px 0; color:#27313c;
+      font-size:1.07em;
+    }
+    .porque-block span {
+      color: var(--dorado); font-size: 1.7em; margin-bottom: 5px; display: inline-block;
+    }
+    /* ===== SERVICIOS ===== */
+    .servicios-section {
+      margin-top: 14px;
+      text-align: center;
+    }
+    .servicios-list {
+      display: flex; flex-wrap: wrap; gap:22px; justify-content: center; margin-top:12px;
+    }
+    .servicio-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 14px #b6b2a729;
+      border: 1.5px solid var(--acero);
+      width: 185px;
+      min-width:130px;
+      padding: 23px 12px 15px 12px;
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+      transition: box-shadow .12s, border .13s;
+    }
+    .servicio-card:hover { box-shadow: 0 5px 20px #c4c58e25; border-color: var(--dorado);}
+    .servicio-icon {
+      font-size:2em; margin-bottom:10px; color:var(--dorado); text-shadow: 0 2px 8px #e6c77436;
+    }
+    .servicio-title {
+      font-family:Oswald,sans-serif;font-weight:700;font-size:1.09em;color:var(--azul2);margin-bottom:5px;text-transform:uppercase;
+    }
+    .servicio-desc {
+      font-size:.99em;color:#58698b;font-weight:500;
+    }
+    /* ==== SECTORES ==== */
+    .sectores-section {
+      background: #fafdff;
+      border-radius: 14px;
+      margin: 30px 0 14px 0;
+      padding: 23px 10px 17px 10px;
+      box-shadow: 0 4px 18px #b0b0c82a;
+      text-align: center;
+    }
+    .sectores-list {
+      display: flex; flex-wrap: wrap; gap:18px; justify-content: center; margin-top:13px;
+    }
+    .sector-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 1px 10px #b6b2a729;
+      border: 1.2px solid var(--gris);
+      width: 150px;
+      min-width:100px;
+      padding: 18px 7px 9px 7px;
+      text-align: center;
+      display: flex; flex-direction: column; align-items: center;
+      font-weight:700;
+      font-family: Oswald,sans-serif;
+      color:var(--azul2);
+      font-size:1.07em;
+      text-transform: uppercase;
+    }
+    /* ===== RESTO IGUAL QUE ANTES ===== */
     .slider-pro {
       display: flex; gap: 18px;
       overflow-x: auto;
       scroll-snap-type: x mandatory;
       padding-bottom: 9px;
+      margin-bottom:10px;
     }
     .card {
       scroll-snap-align: center;
@@ -176,7 +211,6 @@
       margin-right: 4px;
       position: relative;
       animation: fadeIn .8s;
-      transition: transform .14s;
       border: 1.5px solid var(--acero);
     }
     @keyframes fadeIn { from{opacity:0;transform:translateY(35px);} to{opacity:1;transform:none;}}
@@ -208,11 +242,7 @@
       font-size:.97em;
       margin-top:2px;
     }
-    /* ===== COMO TRABAJAMOS ===== */
-    .how-steps {
-      display: flex; flex-wrap: wrap;
-      gap: 26px; justify-content: center; margin-top:19px;
-    }
+    .how-steps { display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; margin-top:19px;}
     .how-step {
       background: #f6f7fa;
       border: 2.2px solid var(--acero);
@@ -226,80 +256,25 @@
       transition: box-shadow .13s, border .13s;
     }
     .how-step:hover { box-shadow: 0 5px 28px #c4c58e24; border-color: var(--dorado);}
-    .how-step-icon {
-      font-size:2.1em;
-      margin-bottom:7px;
-      color:var(--dorado);
-      text-shadow: 0 2px 8px #e6c77436;
-    }
-    .how-step-title {
-      font-weight: 700;
-      color: var(--azul2);
-      margin-bottom: 7px;
-      font-size:1.09em;
-    }
-    .how-step-desc {
-      color: #58698b;
-      font-size:.99em;
-      font-weight: 500;
-      min-height:50px;
-    }
-    /* ====== CONTACT ===== */
-    .contacto {
-      text-align: center;
-      margin-top: 30px;
-      background: linear-gradient(90deg, var(--azul2), var(--acero));
-      color: #fff;
-      border-radius: 17px;
-      box-shadow: 0 4px 20px #b7b6c924;
-      padding: 33px 10px 28px 10px;
-    }
-    .contacto h2 {
-      color: var(--dorado);
-      font-family: Oswald,Inter,Arial;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing:0.08em;
-    }
-    .contacto .btn {
-      background: linear-gradient(90deg, var(--dorado), var(--rojo) 90%);
-      color: #fff;
-      font-weight: 700;
-      padding: 13px 36px;
-      border-radius: 9px;
-      margin: 10px 7px 6px 7px;
-      text-decoration: none;
-      font-size: 1.14em;
-      box-shadow: 0 2px 10px #b6cde948;
-      transition: background .15s, transform .08s;
-      display: inline-block;
-    }
+    .how-step-icon { font-size:2.1em; margin-bottom:7px; color:var(--dorado); text-shadow: 0 2px 8px #e6c77436;}
+    .how-step-title { font-weight: 700; color: var(--azul2); margin-bottom: 7px; font-size:1.09em;}
+    .how-step-desc { color: #58698b; font-size:.99em; font-weight: 500; min-height:50px;}
+    .contacto { text-align: center; margin-top: 30px; background: linear-gradient(90deg, var(--azul2), var(--acero)); color: #fff; border-radius: 17px; box-shadow: 0 4px 20px #b7b6c924; padding: 33px 10px 28px 10px;}
+    .contacto h2 { color: var(--dorado); font-family: Oswald,Inter,Arial; margin-bottom: 8px; text-transform: uppercase; letter-spacing:0.08em;}
+    .contacto .btn { background: linear-gradient(90deg, var(--dorado), var(--rojo) 90%); color: #fff; font-weight: 700; padding: 13px 36px; border-radius: 9px; margin: 10px 7px 6px 7px; text-decoration: none; font-size: 1.14em; box-shadow: 0 2px 10px #b6cde948; transition: background .15s, transform .08s; display: inline-block;}
     .contacto .btn:hover { background: var(--azul2);}
-    /* ======= FOOTER ====== */
-    footer {
-      text-align: center;
-      color: #929fb2;
-      padding: 27px 0 14px 0;
-      font-size: 1.03em;
-      margin-top: 25px;
-      background: #f7fafd;
-      border-top: 2.5px solid #e9c98244;
-      letter-spacing: .04em;
-    }
-    /* ===== MOBILE OPTIMIZACION ===== */
+    footer { text-align: center; color: #929fb2; padding: 27px 0 14px 0; font-size: 1.03em; margin-top: 25px; background: #f7fafd; border-top: 2.5px solid #e9c98244; letter-spacing: .04em;}
+    /* ==== MOBILE ==== */
     @media (max-width: 900px) {
       .hero-inner {flex-direction: column; align-items: flex-start; padding:10px 2vw;}
       .hero-info {margin-bottom:15px;}
       .hero-media {margin-bottom:0; margin-top:10px;}
-      .hero-title {font-size: 1.3em;}
+      .hero-title {font-size: 1.4em;}
       .slider-pro {gap:10px;}
       .card {min-width: 83vw;max-width: 93vw;}
-    }
-    @media (max-width:700px){
-      .hero-inner {padding:5px 0;}
-      .hero-media {width:100%;justify-content:center;}
-      .hero-video {max-width:97vw;border-radius:17px;}
-      .galeria {padding:0;}
+      .porque-ar {flex-direction:column;gap:13px;}
+      .servicios-list {flex-direction:column;align-items:center;gap:13px;}
+      .sectores-list {flex-direction:column;align-items:center;gap:8px;}
     }
     @media (max-width: 540px){
       .hero-video-mobile {display:block;}
@@ -311,58 +286,133 @@
       .card img,.card video {height:30vw;min-height:110px;}
       .slider-pro {padding-bottom:7px;}
     }
-    /* ==== Animaciones de scroll (fade) ==== */
-    .fade-in { opacity:0; transform: translateY(55px); transition: opacity 0.7s, transform 0.5s;}
-    .fade-in.visible { opacity:1; transform: none;}
   </style>
 </head>
 <body>
-  <!-- HEADER HERO -->
   <div class="hero">
-    <div class="hero-inner">
+    <div class="hero-inner wrapper">
       <div class="hero-info">
-        <div class="hero-title">GRUPO AR <span style="color:#fff;">| Construcción y Franquicias</span></div>
-        <div class="hero-tag">Obra civil para cadenas, franquicias y sector industrial en México</div>
+        <div class="hero-title">GRUPO AR | Solución Integral</div>
         <div class="hero-desc">
-          Desde Salamanca, Gto. hacia todo el país, somos tu aliado de confianza para llevar tus proyectos a otro nivel.<br>
-          Precisión, garantía y diseño. <b>Convertimos ideas en espacios de éxito.</b>
+          Tu aliado único para <b>diseño, construcción, remodelación y mantenimiento</b> de espacios comerciales, industriales y residenciales.<br>
+          <span style="color:#e9c982;">¡De la idea a la realidad, todo bajo un mismo equipo!</span>
         </div>
         <div class="hero-points">
-          <span>OXXO, Farmacias, Franquicias</span>
-          <span>Proyectos llave en mano</span>
-          <span>Entrega garantizada</span>
+          <span>Diseño arquitectónico y de ingeniería</span>
+          <span>Obra civil completa</span>
+          <span>Instalaciones eléctricas y plomería</span>
+          <span>Soldadura, acabados y mantenimiento</span>
         </div>
-        <a href="#contacto" class="hero-btn">¡Contáctanos ahora!</a>
+        <a href="#contacto" class="hero-btn">¡Cotiza tu proyecto hoy!</a>
       </div>
       <div class="hero-media">
-        <video class="hero-video" autoplay muted loop playsinline poster="https://i.imgur.com/TFsNz7f.jpeg">
+        <video class="hero-video" controls poster="https://i.imgur.com/TFsNz7f.jpeg">
           <source src="https://imgur.com/2KTg9RF.mp4" type="video/mp4">
+          Tu navegador no soporta video embebido.
         </video>
       </div>
     </div>
-    <!-- Mobile Full Video Below Hero -->
-    <div class="hero-video-mobile">
-      <video style="width:100vw;max-width:100vw;border-radius:0;border:none;display:block;outline:none;" autoplay muted loop playsinline poster="https://i.imgur.com/TFsNz7f.jpeg">
-        <source src="https://imgur.com/2KTg9RF.mp4" type="video/mp4">
-      </video>
-    </div>
+    <!-- Para móviles -->
+    <video class="hero-video-mobile" controls poster="https://i.imgur.com/TFsNz7f.jpeg" style="width:100%;max-width:700px;margin:auto;display:block;">
+      <source src="https://imgur.com/2KTg9RF.mp4" type="video/mp4">
+      Tu navegador no soporta video embebido.
+    </video>
   </div>
-
-  <main>
-    <section class="fade-in">
-      <h2 style="text-align:center;color:var(--azul2);margin-bottom:10px;font-family:Oswald,sans-serif;text-transform:uppercase;">¿Qué hacemos?</h2>
-      <p style="text-align:center;font-size:1.13em;max-width:750px;margin:0 auto;">
-        Construcción y diseño de proyectos para franquicias, cadenas, sector comercial e industrial.<br>
-        Nuestro equipo cubre desde la planeación y diseño hasta la entrega llave en mano.<br>
-        <b>Remodelaciones, ampliaciones y obras nuevas con máxima calidad y cumplimiento.</b>
-      </p>
+  <main class="wrapper">
+    <!-- POR QUÉ GRUPO AR -->
+    <section class="porque-ar">
+      <div class="porque-block">
+        <span>🛠️</span>
+        <div class="porque-block-title">Solución Integral 360°</div>
+        <ul class="porque-block-list">
+          <li>Diseño arquitectónico e ingeniería</li>
+          <li>Obra civil, estructuras y albañilería</li>
+          <li>Soldadura, electricidad y plomería</li>
+          <li>Acabados, mantenimiento y remodelaciones</li>
+          <li>Todo en un solo equipo: sin subcontratos, sin preocupaciones</li>
+        </ul>
+      </div>
+      <div class="porque-block">
+        <span>🏗️</span>
+        <div class="porque-block-title">Capacidad para Grandes Proyectos</div>
+        <ul class="porque-block-list">
+          <li>Locales y franquicias (Oxxo, Farmacias, cadenas)</li>
+          <li>Consultorios, clínicas y laboratorios</li>
+          <li>Naves industriales y ampliaciones</li>
+          <li>Residencial y espacios comerciales</li>
+        </ul>
+      </div>
+      <div class="porque-block">
+        <span>🔒</span>
+        <div class="porque-block-title">Calidad, Seguridad y Garantía</div>
+        <ul class="porque-block-list">
+          <li>Personal certificado y equipo especializado</li>
+          <li>Supervisión directa, entregas a tiempo</li>
+          <li>Garantía de satisfacción y soporte post-obra</li>
+        </ul>
+      </div>
     </section>
-    <section class="galeria fade-in" id="galeria">
-      <h2 style="text-align:center;color:var(--azul2);margin-bottom:13px;font-family:Oswald,sans-serif;text-transform:uppercase;">Portafolio de Proyectos</h2>
+    <!-- SERVICIOS -->
+    <section class="servicios-section">
+      <h2 style="color:var(--azul2);font-family:Oswald,sans-serif;text-transform:uppercase;margin-bottom:7px;">Servicios que ofrecemos</h2>
+      <div class="servicios-list">
+        <div class="servicio-card">
+          <div class="servicio-icon">📐</div>
+          <div class="servicio-title">Diseño & Proyectos</div>
+          <div class="servicio-desc">Planos, renders, ingenierías y gestión de permisos.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🏗️</div>
+          <div class="servicio-title">Obra civil y albañilería</div>
+          <div class="servicio-desc">Cimentaciones, firmes, muros, losas y estructuras.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">⚡</div>
+          <div class="servicio-title">Electricidad</div>
+          <div class="servicio-desc">Instalaciones eléctricas industriales y comerciales, tableros y transformadores.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🔩</div>
+          <div class="servicio-title">Soldadura & Herrería</div>
+          <div class="servicio-desc">Estructuras, techados, puertas y racks industriales.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🚰</div>
+          <div class="servicio-title">Plomería y Fontanería</div>
+          <div class="servicio-desc">Tuberías, desagües, bombas, cisternas y gas.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🎨</div>
+          <div class="servicio-title">Acabados</div>
+          <div class="servicio-desc">Pisos, yeso, pintura, muros decorativos y detalles premium.</div>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🔧</div>
+          <div class="servicio-title">Mantenimiento Integral</div>
+          <div class="servicio-desc">Remodelaciones, impermeabilización, ampliaciones y urgencias.</div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTORES -->
+    <section class="sectores-section">
+      <h2 style="color:var(--azul2);font-family:Oswald,sans-serif;text-transform:uppercase;margin-bottom:7px;">Atendemos</h2>
+      <div class="sectores-list">
+        <div class="sector-card">Cadenas & Franquicias</div>
+        <div class="sector-card">Comercial</div>
+        <div class="sector-card">Industrial</div>
+        <div class="sector-card">Residencial</div>
+        <div class="sector-card">Salud & Consultorios</div>
+        <div class="sector-card">Expansión nacional</div>
+      </div>
+    </section>
+    <!-- GALERÍA -->
+    <section>
+      <h2 style="text-align:center;color:var(--azul2);margin-bottom:14px;font-family:Oswald,sans-serif;text-transform:uppercase;">Proyectos destacados</h2>
       <div class="slider-pro" id="sliderPro">
-        <div class="card"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="desc">Farmacia y consultorio similares<span>Cadena nacional</span></div></div>
-        <div class="card"><img src="https://i.imgur.com/Rss7uBW.jpeg"><div class="desc">Detalles en consultorios<span>Remates y acabados</span></div></div>
-        <div class="card"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="desc">Transformadores industriales<span>Nave industrial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="desc">Farmacia & consultorio<span>Apertura de cadena</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/Rss7uBW.jpeg"><div class="desc">Detalle de obra<span>Acabado farmacia</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/QQVwjMN.jpeg"><div class="desc">Impermeabilización<span>Losa industrial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="desc">Transformadores<span>Nave industrial</span></div></div>
         <div class="card"><img src="https://i.imgur.com/HPlLbbR.jpeg"><div class="desc">Barra y cocina para eventos<span>Acabado premium</span></div></div>
         <div class="card"><img src="https://i.imgur.com/R0O3l8W.jpeg"><div class="desc">Render de escaleras<span>Diseño estructural</span></div></div>
         <div class="card"><img src="https://i.imgur.com/JKDQ0zH.jpeg"><div class="desc">Techado segundo piso<span>Casa habitación</span></div></div>
@@ -379,7 +429,8 @@
         <div class="card"><img src="https://i.imgur.com/oAq3IpW.jpeg"><div class="desc">Transformadores instalados<span>Industria</span></div></div>
       </div>
     </section>
-    <section class="fade-in">
+    <!-- PROCESO -->
+    <section>
       <h2 style="text-align:center;color:var(--azul2);margin-bottom:12px;font-family:Oswald,sans-serif;text-transform:uppercase;">¿Cómo trabajamos?</h2>
       <div class="how-steps">
         <div class="how-step">
@@ -388,22 +439,23 @@
           <div class="how-step-desc">Escuchamos tu idea y necesidades. Sin compromiso.</div>
         </div>
         <div class="how-step">
-          <div class="how-step-icon">📝</div>
-          <div class="how-step-title">Proyecto y Propuesta</div>
-          <div class="how-step-desc">Presentamos solución, renders y cotización clara.</div>
+          <div class="how-step-icon">📐</div>
+          <div class="how-step-title">Diseño y Proyecto</div>
+          <div class="how-step-desc">Propuesta, renders y cotización a tu medida.</div>
         </div>
         <div class="how-step">
           <div class="how-step-icon">🏗️</div>
-          <div class="how-step-title">Ejecución Profesional</div>
+          <div class="how-step-title">Ejecución Integral</div>
           <div class="how-step-desc">Construcción, instalaciones y acabados llave en mano.</div>
         </div>
         <div class="how-step">
           <div class="how-step-icon">🔑</div>
           <div class="how-step-title">Entrega Garantizada</div>
-          <div class="how-step-desc">Resultados, garantía y satisfacción. ¡Tu obra, lista!</div>
+          <div class="how-step-desc">Resultados, garantía y soporte post-obra.</div>
         </div>
       </div>
     </section>
+    <!-- CONTACTO -->
     <section class="contacto" id="contacto">
       <h2>¡Cotiza tu franquicia, local o nave ahora!</h2>
       <a class="btn" href="https://wa.me/5214381346142" target="_blank">WhatsApp Directo</a>
@@ -437,14 +489,6 @@
       let walk=(x-startX)*2;
       slider.scrollLeft=scrollLeft-walk;
     });
-    // Fade-in anim
-    function onScrollFade() {
-      document.querySelectorAll('.fade-in').forEach(el=>{
-        let rect=el.getBoundingClientRect();
-        if(rect.top < window.innerHeight-50) el.classList.add('visible');
-      });
-    }
-    window.addEventListener('scroll',onScrollFade); onScrollFade();
   </script>
 </body>
 </html>
