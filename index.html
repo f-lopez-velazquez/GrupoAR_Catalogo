@@ -3,447 +3,448 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Grupo AR | Construcción de Cadenas y Franquicias</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>Grupo AR | Construcción y Franquicias</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Oswald:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul: #09345c;
-      --azul2: #0d549d;
+      --azul: #14334d;
+      --azul2: #2576a6;
+      --acero: #737b8b;
+      --dorado: #e9c982;
+      --fondo: #f4f7fa;
+      --concreto: #e3e5e8;
       --rojo: #c4231a;
-      --gris: #32404c;
-      --dorado: #dfc178;
-      --fondo: #f7fafd;
-      --borde: #e6e9f0;
-      --panel: #fff;
+      --shadow: 0 6px 32px #14405c25;
     }
     html,body {margin:0;padding:0;}
     body {
       font-family: 'Inter', Arial, sans-serif;
       background: var(--fondo);
-      color: var(--gris);
+      color: var(--azul);
+      min-height: 100vh;
+      letter-spacing:.03em;
     }
-    /* ======= HEADER HERO VIDEO ======= */
+    /* ====== HERO HEADER IMPACTO ====== */
     .hero {
-      background: linear-gradient(115deg, var(--azul) 65%, var(--azul2) 100%);
-      padding-bottom: 0;
-      min-height: 470px;
+      background: linear-gradient(105deg, var(--azul) 70%, var(--acero) 120%);
       position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
       overflow: hidden;
-      box-shadow: 0 8px 34px #0a274940;
+      box-shadow: var(--shadow);
     }
-    .hero-content {
-      position: relative;
-      z-index: 3;
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -180px; left: -80px;
+      width: 130vw; height: 160vw;
+      background: repeating-linear-gradient(120deg, #b0b4bd11 0 10px, transparent 10px 22px);
+      opacity: 0.22;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .hero-inner {
+      width: 100%;
       max-width: 1100px;
-      margin: 0 auto;
-      padding: 54px 15px 0 15px;
-      text-align: left;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 30px;
+      justify-content: space-between;
+      z-index: 3;
+      padding: 20px 3vw 0 3vw;
+      position: relative;
     }
-    .hero-logo {
-      flex: 0 0 120px;
-      text-align: center;
-      margin-right: 24px;
+    .hero-video-mobile {
+      display:none;
     }
-    .hero-logo img {
-      width: 120px; height: 120px;
-      border-radius: 24px;
-      box-shadow: 0 5px 34px #06254a38;
-      border: 3px solid var(--dorado);
-      background: #fff;
-    }
-    .hero-text {
-      flex: 1 1 360px;
+    .hero-info {
+      flex:1 1 380px;
+      z-index:4;
       color: #fff;
+      margin-bottom: 40px;
+      animation: fadeInDown .8s;
     }
+    @keyframes fadeInDown { from {opacity:0; transform:translateY(-45px);} to {opacity:1; transform:none;} }
     .hero-title {
-      font-size: 2.45em;
-      font-weight: 800;
-      margin-bottom: 10px;
-      letter-spacing: 1.2px;
+      font-family: 'Oswald', 'Inter', Arial, sans-serif;
+      font-size: 2.3em;
+      font-weight: 900;
       color: var(--dorado);
-      text-shadow: 0 2px 11px #0e232e4d;
-      line-height: 1.15;
+      letter-spacing: .09em;
+      text-shadow: 0 2px 18px #12223e59;
+      margin-bottom: 12px;
+      line-height:1.13;
+      text-transform: uppercase;
     }
-    .hero-sub {
-      font-size: 1.16em;
-      font-weight: 400;
-      color: #d3e9ff;
-      margin-bottom: 14px;
-      line-height: 1.32;
-      max-width: 670px;
+    .hero-tag {
+      font-size:1.09em;
+      color: #e8e4d4;
+      margin-bottom:11px;
+      letter-spacing:.05em;
+    }
+    .hero-desc {
+      background: rgba(27,44,67,0.53);
+      border-radius: 15px;
+      padding: 13px 19px;
+      font-size: 1.17em;
+      margin-bottom: 16px;
+      color: #fff;
+      box-shadow: 0 3px 14px #0003;
+      max-width: 470px;
+      font-weight:500;
     }
     .hero-points {
       display: flex;
+      gap: 15px;
       flex-wrap: wrap;
-      gap: 23px 37px;
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
     .hero-points span {
-      font-size: 1.02em;
+      font-size: 1em;
       color: #fff;
-      background: rgba(23,56,120,0.26);
-      border-radius: 16px;
-      padding: 6px 19px 6px 13px;
+      background: rgba(17,28,44,0.13);
+      border-radius: 12px;
+      padding: 6px 16px 6px 11px;
       font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 7px;
+      display: flex; align-items: center; gap: 7px;
+      box-shadow: 0 1px 5px #0001;
     }
     .hero-points span:before {
-      content: "★";
+      content: "🔨";
       color: var(--dorado);
-      font-size: 1em;
+      font-size: 1.13em;
       margin-right: 3px;
     }
-    .hero-btns {
-      margin-top: 15px;
-    }
     .hero-btn {
-      background: linear-gradient(90deg, var(--dorado), var(--rojo) 90%);
+      background: linear-gradient(90deg, var(--dorado), var(--rojo) 92%);
       color: #fff;
-      font-size: 1.14em;
-      font-weight: 700;
+      font-size: 1.15em;
+      font-weight: 800;
       border: none;
-      border-radius: 12px;
-      padding: 14px 34px;
+      border-radius: 11px;
+      padding: 13px 32px;
       margin-right: 10px;
-      margin-bottom: 10px;
       text-decoration: none;
-      transition: box-shadow .12s, background .16s;
-      box-shadow: 0 4px 18px #d2b36424;
-      letter-spacing: .5px;
+      letter-spacing: .07em;
+      transition: background .16s, transform .09s;
+      box-shadow: 0 4px 16px #d2b3643d;
       display: inline-block;
+      margin-top:8px;
+      text-shadow:0 2px 8px #6e623d2e;
     }
-    .hero-btn:hover { background: var(--azul2); color: #fffbe7;}
-    /* VIDEO HERO */
-    .hero-video-wrap {
-      position: absolute;
-      right: 0; bottom: 0; top: 0;
-      min-width: 420px; max-width: 700px; width: 42vw;
-      z-index: 2;
-      box-shadow: -8px 0 36px #23354a1c;
-      background: #0d305e;
+    .hero-btn:hover { background: var(--azul2);}
+    .hero-media {
+      flex:0 0 420px;
+      z-index:4;
+      margin-top: 40px;
+      margin-bottom: 35px;
       display: flex;
-      align-items: flex-end;
+      justify-content: flex-end;
+      align-items: center;
+      animation: fadeInRight 1.1s;
     }
+    @keyframes fadeInRight { from{opacity:0;transform:translateX(70px);} to{opacity:1;transform:none;} }
     .hero-video {
-      width: 100%; max-width: 700px;
-      min-width: 320px; min-height: 260px;
-      border-radius: 40px 0 0 0;
-      box-shadow: 0 8px 44px #1a22594a;
-      margin-bottom: -8px;
-      outline: 3px solid var(--dorado);
+      border-radius: 30px;
+      box-shadow: 0 8px 46px #192a3d42, 0 0 0 8px #e9c98244;
+      max-width: 410px;
+      min-width: 240px;
+      border: 5px solid var(--dorado);
+      background: #fff;
+      aspect-ratio: 16/9;
+      outline: 2.5px solid #d9c28c;
     }
-    /* MAIN SECTIONS */
-    main {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 16px;
-    }
-    section {
-      background: var(--panel);
-      border-radius: 18px;
-      box-shadow: 0 2px 18px #b7cfe068;
-      padding: 32px 26px 26px 26px;
-      margin-top: 33px;
-      animation: fadein .9s;
-    }
-    @keyframes fadein {
-      from { opacity:0; transform:translateY(40px);}
-      to { opacity:1; transform:none;}
-    }
-    /* ===== GALERÍA SLIDER ===== */
+    /* ===== GALERIA PRO ===== */
     .galeria {
-      width: 100%;
-      overflow: hidden;
-      margin-top: 5px;
+      margin-top:20px;
     }
-    .slider {
-      display: flex;
-      transition: transform 0.6s cubic-bezier(.25,.8,.48,1.01);
-      gap: 22px;
+    .slider-pro {
+      display: flex; gap: 18px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 9px;
     }
-    .slide {
-      min-width: 270px;
-      max-width: 340px;
-      background: #f7fafc;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px #c2d8e052;
+    .card {
+      scroll-snap-align: center;
+      min-width: 300px; max-width: 350px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 22px #b1b6bc28;
       overflow: hidden;
+      margin-right: 4px;
       position: relative;
-      flex: 0 0 310px;
-      display: flex; flex-direction: column;
+      animation: fadeIn .8s;
+      transition: transform .14s;
+      border: 1.5px solid var(--acero);
     }
-    .slide img, .slide video {
-      width: 100%;
-      height: 192px;
+    @keyframes fadeIn { from{opacity:0;transform:translateY(35px);} to{opacity:1;transform:none;}}
+    .card img, .card video {
+      width: 100%; height: 200px;
       object-fit: cover;
-      background: #e5eefa;
-      border-bottom: 1px solid #c7d2ea;
-    }
-    .slide .desc {
-      padding: 16px 13px 8px 13px;
-      font-weight: 600;
-      font-size: 1.07em;
-      color: var(--azul2);
-      min-height: 54px;
-    }
-    .slide .desc span {
+      filter: grayscale(12%) contrast(1.09);
       display: block;
-      font-size: .94em;
-      color: #505d7a;
-      font-weight: 400;
-      margin-top: 4px;
+      background: #ececec;
+      border-bottom: 2.5px solid var(--dorado);
     }
-    .slider-nav {
+    .card .desc {
+      background: linear-gradient(90deg,#222b3c 80%, #6e7072cc 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.05em;
+      padding: 13px 17px 11px 17px;
+      position: absolute;
+      left:0; right:0; bottom:0;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 -2px 13px #b3a9621c;
+      text-shadow: 0 2px 11px #12223e2e;
+      min-height: 56px;
+      display: flex; flex-direction: column; gap:3px;
+    }
+    .card .desc span {
+      font-weight:400;
+      color: #ead892;
+      font-size:.97em;
+      margin-top:2px;
+    }
+    /* ===== COMO TRABAJAMOS ===== */
+    .how-steps {
+      display: flex; flex-wrap: wrap;
+      gap: 26px; justify-content: center; margin-top:19px;
+    }
+    .how-step {
+      background: #f6f7fa;
+      border: 2.2px solid var(--acero);
+      border-radius: 15px;
+      box-shadow: 0 2px 13px #c4ccd13c;
+      padding: 23px 14px 16px 14px;
+      flex: 1 1 220px;
+      max-width: 260px;
+      min-width: 130px;
       text-align: center;
-      margin-top: 12px;
+      transition: box-shadow .13s, border .13s;
     }
-    .slider-dot {
-      width: 15px; height: 15px;
-      border-radius: 50%;
-      display: inline-block;
-      margin: 0 5px;
-      background: #e6e8f0;
-      border: 2.5px solid var(--azul2);
-      transition: background .2s;
-      cursor: pointer;
+    .how-step:hover { box-shadow: 0 5px 28px #c4c58e24; border-color: var(--dorado);}
+    .how-step-icon {
+      font-size:2.1em;
+      margin-bottom:7px;
+      color:var(--dorado);
+      text-shadow: 0 2px 8px #e6c77436;
     }
-    .slider-dot.active { background: var(--dorado);}
-    /* ====== PORQUE ====== */
-    .porque {
-      display: flex; flex-wrap: wrap; gap: 32px;
-      margin-top: 18px;
-      justify-content: center;
+    .how-step-title {
+      font-weight: 700;
+      color: var(--azul2);
+      margin-bottom: 7px;
+      font-size:1.09em;
     }
-    .porque .razon {
-      flex: 1 1 230px;
-      background: #f2f5f7;
-      border-left: 7px solid var(--dorado);
-      border-radius: 13px;
-      padding: 18px 17px 14px 20px;
-      font-size: 1.08em;
-      color: var(--gris);
-      box-shadow: 0 2px 12px #e1d39c2e;
-      margin-bottom: 6px;
-      min-width: 210px;
+    .how-step-desc {
+      color: #58698b;
+      font-size:.99em;
+      font-weight: 500;
+      min-height:50px;
     }
-    .porque .razon strong { color: var(--azul2); }
-    /* CONTACTO */
+    /* ====== CONTACT ===== */
     .contacto {
       text-align: center;
-      margin-top: 17px;
-      background: var(--azul2);
+      margin-top: 30px;
+      background: linear-gradient(90deg, var(--azul2), var(--acero));
       color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 3px 22px #c6daed2e;
-      padding: 29px 10px 27px 10px;
+      border-radius: 17px;
+      box-shadow: 0 4px 20px #b7b6c924;
+      padding: 33px 10px 28px 10px;
     }
     .contacto h2 {
       color: var(--dorado);
-      margin-bottom: 10px;
+      font-family: Oswald,Inter,Arial;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing:0.08em;
     }
     .contacto .btn {
-      background: linear-gradient(90deg, var(--dorado), var(--rojo) 80%);
+      background: linear-gradient(90deg, var(--dorado), var(--rojo) 90%);
       color: #fff;
-      font-weight: 600;
+      font-weight: 700;
       padding: 13px 36px;
-      border-radius: 8px;
-      margin: 8px 7px;
+      border-radius: 9px;
+      margin: 10px 7px 6px 7px;
       text-decoration: none;
       font-size: 1.14em;
       box-shadow: 0 2px 10px #b6cde948;
-      transition: background .14s, transform .1s;
+      transition: background .15s, transform .08s;
       display: inline-block;
     }
-    .contacto .btn:hover { background: var(--rojo); transform: scale(1.04);}
+    .contacto .btn:hover { background: var(--azul2);}
+    /* ======= FOOTER ====== */
     footer {
       text-align: center;
-      color: #8492a5;
-      padding: 24px 0 13px 0;
-      font-size: 1.01em;
+      color: #929fb2;
+      padding: 27px 0 14px 0;
+      font-size: 1.03em;
       margin-top: 25px;
+      background: #f7fafd;
+      border-top: 2.5px solid #e9c98244;
+      letter-spacing: .04em;
     }
+    /* ===== MOBILE OPTIMIZACION ===== */
     @media (max-width: 900px) {
-      .hero-content { flex-direction: column; align-items: flex-start; gap: 17px;}
-      .hero-logo { margin: 0 0 13px 0;}
-      .hero-video-wrap { position: static; width:100%; min-width:200px; max-width:none; margin: 0 auto; border-radius:0; box-shadow:none;}
-      .hero-video { min-width: 210px; border-radius: 28px;}
+      .hero-inner {flex-direction: column; align-items: flex-start; padding:10px 2vw;}
+      .hero-info {margin-bottom:15px;}
+      .hero-media {margin-bottom:0; margin-top:10px;}
+      .hero-title {font-size: 1.3em;}
+      .slider-pro {gap:10px;}
+      .card {min-width: 83vw;max-width: 93vw;}
     }
-    @media (max-width: 670px) {
-      .hero-content {padding: 34px 5px 0 5px;}
-      .hero-title { font-size: 1.23em;}
-      section {padding:13px 2vw;}
-      .slider {gap:11px;}
-      .slide { min-width: 95vw; max-width:99vw;}
-      .galeria {margin:0;}
+    @media (max-width:700px){
+      .hero-inner {padding:5px 0;}
+      .hero-media {width:100%;justify-content:center;}
+      .hero-video {max-width:97vw;border-radius:17px;}
+      .galeria {padding:0;}
     }
+    @media (max-width: 540px){
+      .hero-video-mobile {display:block;}
+      .hero-media, .hero-video {display:none;}
+      .hero {min-height:unset; padding-bottom:0;}
+      .hero-inner {padding:0;}
+      .hero-info {padding:17px 10px 4px 10px;}
+      .hero-btn {font-size:1.04em; padding:12px 19vw;}
+      .card img,.card video {height:30vw;min-height:110px;}
+      .slider-pro {padding-bottom:7px;}
+    }
+    /* ==== Animaciones de scroll (fade) ==== */
+    .fade-in { opacity:0; transform: translateY(55px); transition: opacity 0.7s, transform 0.5s;}
+    .fade-in.visible { opacity:1; transform: none;}
   </style>
 </head>
 <body>
-  <!-- HERO/HEADER con video embebido -->
+  <!-- HEADER HERO -->
   <div class="hero">
-    <div class="hero-content">
-      <div class="hero-logo">
-        <img src="https://i.imgur.com/kf8e57F.jpg" alt="Logo Grupo AR">
-      </div>
-      <div class="hero-text">
-        <div class="hero-title">
-          Grupo AR <span style="color:#fff;">| Construcción y Diseño</span>
-        </div>
-        <div class="hero-sub">
-          <b>Obra civil profesional en cadenas, franquicias y proyectos industriales.</b>
-          <br>Con raíz en Salamanca, Gto. y presencia nacional. Experiencia, calidad y compromiso en cada proyecto.
+    <div class="hero-inner">
+      <div class="hero-info">
+        <div class="hero-title">GRUPO AR <span style="color:#fff;">| Construcción y Franquicias</span></div>
+        <div class="hero-tag">Obra civil para cadenas, franquicias y sector industrial en México</div>
+        <div class="hero-desc">
+          Desde Salamanca, Gto. hacia todo el país, somos tu aliado de confianza para llevar tus proyectos a otro nivel.<br>
+          Precisión, garantía y diseño. <b>Convertimos ideas en espacios de éxito.</b>
         </div>
         <div class="hero-points">
+          <span>OXXO, Farmacias, Franquicias</span>
           <span>Proyectos llave en mano</span>
-          <span>Farmacias, OXXOs y franquicias</span>
-          <span>Cubierta total de garantías</span>
+          <span>Entrega garantizada</span>
         </div>
-        <div class="hero-btns">
-          <a href="#contacto" class="hero-btn">¡Solicita tu proyecto!</a>
-          <a href="#galeria" class="hero-btn" style="background: var(--azul2);">Ver portafolio</a>
-        </div>
+        <a href="#contacto" class="hero-btn">¡Contáctanos ahora!</a>
+      </div>
+      <div class="hero-media">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://i.imgur.com/TFsNz7f.jpeg">
+          <source src="https://imgur.com/2KTg9RF.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
-    <div class="hero-video-wrap">
-      <video class="hero-video" autoplay muted loop playsinline poster="https://i.imgur.com/TFsNz7f.jpeg">
+    <!-- Mobile Full Video Below Hero -->
+    <div class="hero-video-mobile">
+      <video style="width:100vw;max-width:100vw;border-radius:0;border:none;display:block;outline:none;" autoplay muted loop playsinline poster="https://i.imgur.com/TFsNz7f.jpeg">
         <source src="https://imgur.com/2KTg9RF.mp4" type="video/mp4">
-        Tu navegador no soporta el video.
       </video>
     </div>
   </div>
+
   <main>
-    <section class="quehacemos">
-      <h2 style="color:var(--azul2);margin-bottom:7px;text-align:center;">¿Qué hacemos?</h2>
-      <p style="text-align:center;font-size:1.12em;max-width:750px;margin:0 auto;">
-        Convertimos tus ideas en espacios extraordinarios: farmacias, franquicias, naves industriales y residenciales. <br>
-        Nuestro equipo cubre construcción, electricidad, plomería y acabados. Desde la planeación y diseño hasta la entrega llave en mano.
-        <br><br>
-        <b>Remodelaciones, ampliaciones y obras nuevas con calidad, puntualidad y garantía.</b>
+    <section class="fade-in">
+      <h2 style="text-align:center;color:var(--azul2);margin-bottom:10px;font-family:Oswald,sans-serif;text-transform:uppercase;">¿Qué hacemos?</h2>
+      <p style="text-align:center;font-size:1.13em;max-width:750px;margin:0 auto;">
+        Construcción y diseño de proyectos para franquicias, cadenas, sector comercial e industrial.<br>
+        Nuestro equipo cubre desde la planeación y diseño hasta la entrega llave en mano.<br>
+        <b>Remodelaciones, ampliaciones y obras nuevas con máxima calidad y cumplimiento.</b>
       </p>
     </section>
-    <section>
-      <h2 style="text-align:center;color:var(--azul2);margin-bottom:12px;" id="galeria">Proyectos Recientes</h2>
-      <div class="galeria">
-        <div class="slider" id="slider">
-          <!-- Slides aquí: imágenes y videos -->
-          <div class="slide">
-            <img src="https://i.imgur.com/TFsNz7f.jpeg" alt="Farmacia similares">
-            <div class="desc">Farmacia y consultorio similares <span>Cadena nacional</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/Rss7uBW.jpeg" alt="Consultorio detalles">
-            <div class="desc">Detalles en consultorios <span>Remates y acabados</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/aXIZqUY.jpeg" alt="Transformadores industriales">
-            <div class="desc">Transformadores industriales <span>Naves y plantas</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/JKDQ0zH.jpeg" alt="Techado casa">
-            <div class="desc">Techado de casas y comercios <span>Protección, estructura y estética</span></div>
-          </div>
-          <div class="slide">
-            <video src="https://imgur.com/UiJ5VnF.mp4" controls muted poster="https://i.imgur.com/ZFaZKQt.jpeg"></video>
-            <div class="desc">Cuarto acabado en lambrín y luz LED <span>Diseño elegante</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/HPlLbbR.jpeg" alt="Barra y fregadero">
-            <div class="desc">Barra y fregadero <span>Acabados premium</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/R0O3l8W.jpeg" alt="Render escaleras">
-            <div class="desc">Render escaleras modernas <span>Propuesta arquitectónica</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/jD57Scx.jpeg" alt="Fachada casa terminada">
-            <div class="desc">Fachada residencial terminada</div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/Ne8aRhM.jpeg" alt="Centro de llenado">
-            <div class="desc">Centro de llenado de agua <span>Obra industrial</span></div>
-          </div>
-          <div class="slide">
-            <img src="https://i.imgur.com/ZFaZKQt.jpeg" alt="Paneles yeso y led">
-            <div class="desc">Habitaciones con luz LED indirecta <span>Paneles de yeso</span></div>
-          </div>
-        </div>
-        <div class="slider-nav" id="sliderNav"></div>
+    <section class="galeria fade-in" id="galeria">
+      <h2 style="text-align:center;color:var(--azul2);margin-bottom:13px;font-family:Oswald,sans-serif;text-transform:uppercase;">Portafolio de Proyectos</h2>
+      <div class="slider-pro" id="sliderPro">
+        <div class="card"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="desc">Farmacia y consultorio similares<span>Cadena nacional</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/Rss7uBW.jpeg"><div class="desc">Detalles en consultorios<span>Remates y acabados</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="desc">Transformadores industriales<span>Nave industrial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/HPlLbbR.jpeg"><div class="desc">Barra y cocina para eventos<span>Acabado premium</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/R0O3l8W.jpeg"><div class="desc">Render de escaleras<span>Diseño estructural</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/JKDQ0zH.jpeg"><div class="desc">Techado segundo piso<span>Casa habitación</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/uBMUszz.jpeg"><div class="desc">Montaje acero estructural<span>Industria</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/7gmOQe3.jpeg"><div class="desc">Sobre firme de concreto<span>Obra civil</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/Ne8aRhM.jpeg"><div class="desc">Centro de llenado de agua<span>Comercial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/3E0cp5h.jpeg"><div class="desc">Closet y carpintería<span>Paneles y acabados</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/37nbTWw.jpeg"><div class="desc">Cocina de alto diseño<span>Residencial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/Sb3Y4Zd.jpeg"><div class="desc">Recibidor con candil<span>Residencial</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/ZFaZKQt.jpeg"><div class="desc">Habitación con paneles de yeso<span>Remodelación premium</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/6IYvKyk.jpeg"><div class="desc">Baño renovado<span>Remodelación completa</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/cLTupmF.jpeg"><div class="desc">Pared decorativa panel<span>Diseño e iluminación</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/bioxb4f.jpeg"><div class="desc">Drenaje nave industrial<span>Infraestructura</span></div></div>
+        <div class="card"><img src="https://i.imgur.com/oAq3IpW.jpeg"><div class="desc">Transformadores instalados<span>Industria</span></div></div>
       </div>
-      <script>
-        // Slider funcional, táctil y con flechas
-        const slider = document.getElementById('slider');
-        const slides = Array.from(slider.children);
-        const nav = document.getElementById('sliderNav');
-        let current = 0;
-
-        function showSlide(idx) {
-          if(idx < 0) idx = slides.length-1;
-          if(idx >= slides.length) idx = 0;
-          current = idx;
-          slider.style.transform = `translateX(${-idx * (slides[0].offsetWidth + 22)}px)`;
-          nav.querySelectorAll('.slider-dot').forEach((dot,i)=>dot.classList.toggle('active',i===idx));
-        }
-        // Nav dots
-        slides.forEach((_,i)=>{
-          const dot = document.createElement('span');
-          dot.className = "slider-dot" + (i===0?' active':'');
-          dot.onclick = ()=>showSlide(i);
-          nav.appendChild(dot);
-        });
-        // Swipe touch
-        let startX = 0;
-        slider.addEventListener('touchstart',e=>{startX=e.touches[0].clientX;});
-        slider.addEventListener('touchmove',e=>{
-          let dx = e.touches[0].clientX - startX;
-          slider.style.transition = 'none';
-          slider.style.transform = `translateX(${-current*(slides[0].offsetWidth+22)+dx}px)`;
-        });
-        slider.addEventListener('touchend',e=>{
-          let dx = e.changedTouches[0].clientX - startX;
-          slider.style.transition = '';
-          if(Math.abs(dx) > 80) showSlide(current + (dx<0?1:-1));
-          else showSlide(current);
-        });
-        // Flechas (opcional)
-        document.addEventListener('keydown',e=>{
-          if(e.key==='ArrowRight') showSlide(current+1);
-          if(e.key==='ArrowLeft') showSlide(current-1);
-        });
-        // Responsive: reajustar slide al cambiar tamaño
-        window.addEventListener('resize',()=>showSlide(current));
-        // Mostrar slide 0 al cargar
-        setTimeout(()=>showSlide(0),90);
-      </script>
     </section>
-    <section>
-      <h2 style="text-align:center;color:var(--azul2);margin-bottom:12px;">¿Por qué Grupo AR?</h2>
-      <div class="porque">
-        <div class="razon"><strong>✔️ Experiencia nacional</strong><br>Desarrollamos proyectos para cadenas, farmacias y franquicias, cumpliendo estándares de calidad y tiempo en todo México.</div>
-        <div class="razon"><strong>✔️ Soluciones llave en mano</strong><br>Nos encargamos de construcción, electricidad, plomería, acabados y gestión de permisos.</div>
-        <div class="razon"><strong>✔️ Garantía y calidad</strong><br>Cada obra se entrega con garantía, materiales premium y mano de obra calificada.</div>
-        <div class="razon"><strong>✔️ Atención personalizada</strong><br>Proyectos a la medida: desde remodelaciones hasta desarrollos para cadenas completas.</div>
+    <section class="fade-in">
+      <h2 style="text-align:center;color:var(--azul2);margin-bottom:12px;font-family:Oswald,sans-serif;text-transform:uppercase;">¿Cómo trabajamos?</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="how-step-icon">📞</div>
+          <div class="how-step-title">Contacto y Asesoría</div>
+          <div class="how-step-desc">Escuchamos tu idea y necesidades. Sin compromiso.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-icon">📝</div>
+          <div class="how-step-title">Proyecto y Propuesta</div>
+          <div class="how-step-desc">Presentamos solución, renders y cotización clara.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-icon">🏗️</div>
+          <div class="how-step-title">Ejecución Profesional</div>
+          <div class="how-step-desc">Construcción, instalaciones y acabados llave en mano.</div>
+        </div>
+        <div class="how-step">
+          <div class="how-step-icon">🔑</div>
+          <div class="how-step-title">Entrega Garantizada</div>
+          <div class="how-step-desc">Resultados, garantía y satisfacción. ¡Tu obra, lista!</div>
+        </div>
       </div>
     </section>
     <section class="contacto" id="contacto">
-      <h2>¡Cotiza tu proyecto hoy!</h2>
+      <h2>¡Cotiza tu franquicia, local o nave ahora!</h2>
       <a class="btn" href="https://wa.me/5214381346142" target="_blank">WhatsApp Directo</a>
       <a class="btn" href="mailto:grupoconstruccionesar@gmail.com">Correo electrónico</a>
       <a class="btn" href="tel:5214381346142">Llamar</a>
-      <div style="margin-top:15px; font-size:.97em;">
-        También atendemos por redes sociales.<br>
-        <span style="color:var(--dorado);font-weight:600;">¡Grupo AR es tu aliado de confianza!</span>
+      <div style="margin-top:17px; font-size:1em;">
+        También atendemos proyectos residenciales y de expansión industrial.<br>
+        <span style="color:var(--dorado);font-weight:700;">¡Conoce Grupo AR y construye tu éxito!</span>
       </div>
     </section>
   </main>
   <footer>
-    © 2024 Grupo AR | Construcción y Diseño<br>
-    Proyectos para franquicias, cadenas, residenciales e industria en todo México.
+    © 2024 Grupo AR | Construcción & Franquicias<br>
+    Proyectos nacionales para cadenas, franquicias, residencias e industria.
   </footer>
+  <script>
+    // Slider swipe
+    let slider = document.getElementById('sliderPro');
+    let isDown=false,startX,scrollLeft;
+    slider.addEventListener('mousedown',e=>{
+      isDown=true;slider.classList.add('active');
+      startX=e.pageX-slider.offsetLeft;
+      scrollLeft=slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave',()=>isDown=false);
+    slider.addEventListener('mouseup',()=>isDown=false);
+    slider.addEventListener('mousemove',e=>{
+      if(!isDown)return;
+      e.preventDefault();
+      let x=e.pageX-slider.offsetLeft;
+      let walk=(x-startX)*2;
+      slider.scrollLeft=scrollLeft-walk;
+    });
+    // Fade-in anim
+    function onScrollFade() {
+      document.querySelectorAll('.fade-in').forEach(el=>{
+        let rect=el.getBoundingClientRect();
+        if(rect.top < window.innerHeight-50) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll',onScrollFade); onScrollFade();
+  </script>
 </body>
 </html>
