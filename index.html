@@ -3,369 +3,492 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Grupo AR · Construcción y Diseño Profesional</title>
-  <link rel="icon" href="https://i.imgur.com/kf8e57F.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;600;500;400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Grupo AR | Construcción y Diseño</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --azul-oscuro: #193356;
-      --azul-vivo: #2681c3;
-      --rojo: #d6422d;
-      --gris: #f4f6fa;
-      --gris-med: #dce4ee;
-      --beige: #f7f3ee;
-      --oro: #d4b16b;
-      --negro: #171b22;
-      --panel: #fffffffa;
-      --shadow-xl: 0 8px 40px #1730473a;
-      --shadow-md: 0 2px 14px #14386026;
+      --azul: #226198;
+      --azul-osc: #183b5a;
+      --amarillo: #ffc531;
+      --gris: #e7eaf3;
+      --bg: #f5f6fa;
+      --negro: #222;
+      --dorado: #e0af3d;
     }
     body {
-      background: var(--gris);
-      font-family: 'Inter', Arial, sans-serif;
-      color: var(--azul-oscuro);
-      margin:0;
+      background: var(--bg);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin:0; color:var(--azul-osc);
     }
-    /* ========== HERO + BANNER ========== */
-    .hero-banner {
-      background: linear-gradient(120deg,#1e314a 80%,#2f80ed 120%);
-      position:relative;
-      min-height: 370px;
-      display:flex; align-items:stretch; justify-content:center; flex-direction:column;
-      box-shadow: var(--shadow-xl);
-      overflow: hidden;
-    }
-    .hero-banner::before {
-      content: ""; position:absolute; inset:0;
-      background: url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=900&q=80') center/cover no-repeat;
-      opacity:0.13;
-      z-index:0;
-    }
-    .hero-content {
-      position:relative; z-index:2; max-width: 1000px; margin: 0 auto; padding: 48px 3vw 28px 3vw; text-align:center; 
-      display:flex; flex-direction:column; align-items:center; justify-content:center;
+    .hero {
+      background: linear-gradient(180deg, #2575a9 60%, #fff 100%);
+      text-align: center;
+      padding: 0 0 32px 0;
     }
     .logo-main {
-      width:94px; height:94px; border-radius:24px; box-shadow:0 4px 30px #fff3,0 0 0 7px #19335613;
-      background:#fff; display:flex; align-items:center; justify-content:center; margin-bottom:10px;
-      border:4px solid #d4b16b50;
-      transition:transform .22s;
+      margin: 26px auto 12px auto;
+      display: block;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 3px 18px #14314815;
+      width: 110px;
+      padding: 12px;
+      border: 4px solid var(--dorado);
     }
-    .logo-main:hover { transform:scale(1.06);}
-    .brand-title {
-      font-family: 'Montserrat',sans-serif; font-weight:800; font-size:2.2em;
-      color:#fff; letter-spacing:1.3px; margin-bottom:6px;
-      text-shadow:0 3px 22px #19335690, 0 1px 2px #fff8;
-    }
-    .brand-title .highlight { color: var(--oro);}
-    .subtitle {
-      color:var(--oro); font-weight:700; font-size:1.24em; margin-bottom:8px;
-      text-shadow:0 1px 5px #ffffff25;
+    .hero-title {
+      font-size: 2.55em;
+      font-weight: 800;
+      color: var(--amarillo);
+      margin-bottom: 0.07em;
+      text-shadow: 1px 2px 6px #183b5a38;
+      letter-spacing: 0.5px;
     }
     .hero-desc {
-      background:rgba(255,255,255,0.80); color:var(--azul-oscuro);
-      margin:0 auto 15px auto; border-radius:14px; font-size:1.11em; font-weight:500;
-      max-width:540px; box-shadow:0 1px 12px #14284012; padding:13px 20px 11px 20px;
-      border:1.5px solid #e4e7ee;
-      line-height:1.38;
+      color: #fff;
+      font-size: 1.20em;
+      font-weight: 600;
+      margin-bottom: 0.55em;
+      text-shadow: 0 2px 10px #12375d55;
     }
-    .cta-hero {
-      display: flex; gap:15px; justify-content:center; margin-top:18px;
-      flex-wrap:wrap;
+    .hero-sub {
+      color: #fff;
+      font-size: 1.08em;
+      font-weight: 400;
+      margin-bottom: 22px;
+      text-shadow: 0 2px 10px #12375d50;
+    }
+    .video-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 24px auto;
+      background: #fff;
+      border-radius: 19px;
+      box-shadow: 0 2px 18px #12375d18;
+      max-width: 440px;
+      padding: 12px 12px 4px 12px;
+    }
+    .video-wrap video {
+      width: 100%;
+      max-width: 400px;
+      min-height: 220px;
+      border-radius: 14px;
+      object-fit: cover;
+      box-shadow: 0 2px 13px #0a284420;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 1.48em;
+      font-weight: 800;
+      margin: 35px 0 13px 0;
+      color: var(--azul);
+      letter-spacing: 0.5px;
+    }
+    .section-title span {
+      color: var(--amarillo);
+    }
+    .services-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 2px 14px #183b5a13;
+      padding: 22px 24px 16px 24px;
+      width: 245px;
+      min-height: 248px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform .14s;
+      position: relative;
+    }
+    .service-card:hover {
+      transform: translateY(-7px) scale(1.035);
+      box-shadow: 0 7px 26px #12375d20;
+    }
+    .serv-icon-emoji {
+      font-size: 2.7em;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .service-card h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.1em;
+      color: var(--azul);
+      font-weight: 700;
+    }
+    .service-card p {
+      color: #38445b;
+      font-size: .97em;
+      font-weight: 400;
+      margin: 0;
+    }
+    /* Integrales */
+    .solucion-integral {
+      background: #fff;
+      margin: 0 auto 30px auto;
+      max-width: 950px;
+      border-radius: 16px;
+      box-shadow: 0 2px 18px #d9d5c910;
+      padding: 20px 10px;
+      text-align: center;
+    }
+    .solucion-title {
+      font-size: 1.32em;
+      font-weight: 700;
+      color: var(--azul);
+      margin-bottom: 7px;
+    }
+    .solucion-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 24px;
+      justify-content: center;
+      margin: 0 auto;
+      max-width: 870px;
+      padding: 0;
+      list-style: none;
+    }
+    .sol-item {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-size: 1.17em;
+      background: #e9f2fb;
+      color: #222d3c;
+      border-radius: 11px;
+      padding: 13px 25px 11px 16px;
+      min-width: 195px;
+      font-weight: 600;
+      box-shadow: 0 2px 7px #1c50810a;
+      margin-bottom: 0;
+    }
+    .sol-item .icon-emoji {
+      font-size: 2em;
+      margin-right: 2px;
+    }
+
+    /* ¿Por qué elegirnos? */
+    .why-section {
+      margin: 40px auto 15px auto;
+      max-width: 1120px;
+      background: linear-gradient(95deg, #f9f9f9 60%, #e3edf7 100%);
+      border-radius: 20px;
+      padding: 27px 12px 7px 12px;
+      box-shadow: 0 4px 26px #0e315710;
+    }
+    .why-title {
+      text-align: center;
+      font-size: 1.25em;
+      font-weight: 700;
+      color: var(--azul-osc);
+      margin-bottom: 15px;
+      letter-spacing: .5px;
+    }
+    .why-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .why-card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 19px 19px 13px 19px;
+      box-shadow: 0 2px 12px #153b6120;
+      width: 205px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: box-shadow .14s, transform .13s;
+      position: relative;
+    }
+    .why-card:hover {
+      box-shadow: 0 8px 26px #1a488120;
+      transform: translateY(-5px) scale(1.032);
+    }
+    .why-emoji {
+      font-size: 2.3em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .why-card h4 {
+      color: var(--azul);
+      font-weight: 700;
+      margin-bottom: 6px; margin-top:0;
+      font-size: 1.08em;
+    }
+    .why-card p {
+      color: #3d4760;
+      font-size: .98em;
+      font-weight: 500;
+      margin: 0;
+    }
+    /* Portafolio */
+    .portfolio-section {
+      max-width: 1170px;
+      margin: 42px auto 25px auto;
+      padding: 0 5px;
+    }
+    .portfolio-title {
+      font-size: 1.18em;
+      font-weight: 700;
+      color: var(--azul-osc);
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: .2px;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 17px;
+    }
+    .portfolio-item {
+      background: #fff;
+      border-radius: 13px;
+      box-shadow: 0 2px 11px #b0c2d522;
+      overflow: hidden;
+      transition: box-shadow .14s;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-bottom: 1.5px solid #e2e9f3;
+    }
+    .portfolio-desc {
+      padding: 11px 10px 6px 12px;
+      font-size: .99em;
+      color: #294259;
+      font-weight: 500;
+    }
+    /* CTA */
+    .cta {
+      margin: 50px auto 0 auto;
+      padding: 32px 14px 25px 14px;
+      background: linear-gradient(90deg, #228ac8 70%, #174a6b 100%);
+      border-radius: 22px;
+      text-align: center;
+      box-shadow: 0 2px 17px #153c5c19;
+      max-width: 950px;
+      color: #fff;
+    }
+    .cta h2 {
+      font-size: 1.55em;
+      font-weight: 800;
+      color: var(--amarillo);
+      margin-bottom: 10px;
+    }
+    .cta-desc {
+      font-size: 1.09em;
+      margin-bottom: 14px;
+      color: #fff;
+    }
+    .cta-desc span {
+      color: var(--amarillo);
+      font-weight: 700;
     }
     .cta-btn {
-      background: linear-gradient(90deg, var(--oro) 0%, var(--rojo) 90%);
-      color:#fff; font-family:'Montserrat'; font-weight:800; font-size:1.13em;
-      border-radius:12px; border:none; padding:14px 23px; box-shadow:0 1px 8px #d4b16b42;
-      cursor:pointer; text-decoration:none; transition:filter .12s,transform .1s;
-      letter-spacing:.5px;
+      display: inline-flex;
+      align-items: center;
+      background: var(--amarillo);
+      color: #144163;
+      font-weight: 700;
+      font-size: 1.11em;
+      padding: 12px 25px 12px 19px;
+      border-radius: 13px;
+      text-decoration: none;
+      box-shadow: 0 3px 18px #27495c24;
+      transition: background .13s, color .14s, box-shadow .12s;
+      margin-top: 7px;
+      margin-bottom: 5px;
+      border: none;
     }
-    .cta-btn:hover { filter:brightness(1.07); }
-    .cta-btn.catalogo { background: linear-gradient(90deg, var(--azul-vivo) 0%, #133860 110%);}
-    /* ====== CARRUSEL PORTAFOLIO ====== */
-    .catalogo-section {
-      background: var(--panel); margin:-52px auto 22px auto; border-radius: 25px; box-shadow:var(--shadow-md);
-      max-width:1120px; padding:37px 2vw 24px 2vw; position:relative; z-index:4; 
-      border:2.5px solid #e4e7ee;
+    .cta-btn:hover {
+      background: #ffd764;
+      color: #003c6a;
+      box-shadow: 0 7px 27px #14416335;
+      transform: scale(1.04);
     }
-    .catalogo-title {
-      font-family:'Montserrat'; font-weight:800; color:var(--azul-oscuro); font-size:1.35em; margin-bottom:7px; text-align:center;
-      letter-spacing:.3px;
+    .cta-icon {
+      width: 25px;
+      height: 25px;
+      margin-right: 10px;
     }
-    .catalogo-desc {
-      color:var(--azul-vivo); text-align:center; font-size:1.12em; margin-bottom:19px;
-    }
-    .catalogo-carrusel {
-      display: flex; gap:15px; overflow-x:auto; scroll-behavior:smooth; padding-bottom:7px; 
-      scrollbar-width:thin;
-    }
-    .catalogo-item {
-      min-width:275px; max-width:305px; background:var(--gris);
-      border-radius:18px; box-shadow: 0 2px 22px #1933561d;
-      margin-bottom:4px; position:relative; flex:1 0 275px;
-      transition:box-shadow .13s,transform .13s;
-      cursor:pointer; border:2px solid #e4e7ee;
-      display:flex; flex-direction:column;
-    }
-    .catalogo-item:hover { transform:scale(1.04) translateY(-5px); box-shadow:0 7px 32px #18335623;}
-    .catalogo-item img { width:100%; height:168px; object-fit:cover; border-radius:15px 15px 0 0;}
-    .catalogo-caption {
-      color:var(--azul-oscuro); font-weight:700; font-size:1.09em; padding:11px 13px 7px 13px; letter-spacing:.2px;
-    }
-    /* ====== SERVICIOS ====== */
-    .servicios-section {
-      max-width:1140px; margin:35px auto 20px auto; padding:0 2vw;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap:18px;
-    }
-    .servicio-card {
-      background: linear-gradient(130deg,#e6ecf5 70%,#d4b16b1a 100%);
-      border-radius: 18px; box-shadow: 0 1px 17px #18335619;
-      padding:27px 14px 19px 14px; display:flex; flex-direction:column; align-items:center;
-      transition:box-shadow .13s,transform .11s;
-      border:1.7px solid #e4e7ee;
-      cursor:pointer; min-height:200px;
-      position:relative;
-    }
-    .servicio-card:hover { box-shadow:0 8px 36px #1733561f; transform:translateY(-5px) scale(1.04);}
-    .servicio-icon {
-      width:54px; height:54px; margin-bottom:11px; display:flex; align-items:center; justify-content:center;
-      background:#fff; border-radius:15px; box-shadow:0 1px 7px #e4e7ee99; border:2px solid #e4e7ee;
-    }
-    .servicio-title {
-      font-family:'Montserrat'; font-weight:700; font-size:1.13em; color:var(--azul-oscuro);
-      margin-bottom:3px; text-align:center;
-    }
-    .servicio-desc {
-      color: #23405e; font-size:.97em; text-align:center;
-    }
-    /* ====== VIDEO ====== */
-    .video-section {
-      background:var(--beige); margin:35px auto 30px auto; padding:28px 0 22px 0; max-width:670px;
-      border-radius:22px; box-shadow:var(--shadow-xl);
-      text-align:center; border:2.5px solid #e4e7ee;
-      position:relative;
-    }
-    .video-section h3 { color:var(--azul-oscuro); font-family:'Montserrat'; font-weight:800; font-size:1.19em;}
-    .video-responsive {
-      position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:13px;
-      box-shadow: 0 2px 14px #0002; margin-bottom:8px; background:#fff;
-      border:2.2px solid #e4e7ee;
-      margin-top: 10px;
-    }
-    .video-responsive video {
-      position:absolute; top:0; left:0; width:100%; height:100%; border-radius:13px;
-      object-fit:cover;
-    }
-    /* ====== POR QUÉ ELEGIRNOS ====== */
-    .porque-section {
-      max-width:940px; margin:44px auto 24px auto; text-align:center;
-    }
-    .porque-title {
-      font-family:'Montserrat'; font-weight:800; color:var(--rojo); font-size:1.23em; margin-bottom:13px;
-    }
-    .porque-grid {
-      display:flex; gap:14px; flex-wrap:wrap; justify-content:center;
-    }
-    .porque-block {
-      background:linear-gradient(118deg,#f2e7d5 50%,#faf5ed 100%);
-      border-radius:16px; padding:17px 18px; min-width:155px; min-height:64px;
-      color:var(--azul-oscuro); font-weight:600; font-size:1.09em; margin-bottom:8px;
-      box-shadow:0 2px 10px #d4b16b21;
-      border:2px solid #e4e7ee; display:flex; align-items:center; gap:10px;
-      transition:box-shadow .14s,transform .11s;
-      position:relative;
-    }
-    .porque-block svg { width:27px; height:27px;}
-    .porque-block:hover { box-shadow:0 5px 22px #d4b16b2c; transform:scale(1.035);}
-    .porque-block .tag { color:var(--rojo); font-size:.97em; margin-left:4px; font-weight:700;}
-    /* ====== FOOTER + WHATSAPP ====== */
+    /* Footer */
     .footer {
-      background: var(--azul-oscuro); color:#fff; padding:32px 0 20px 0;
-      text-align:center; font-family:'Montserrat',sans-serif; font-size:1.02em;
-      margin-top: 45px;
+      text-align: center;
+      font-size: 1em;
+      color: #435a7b;
+      padding: 22px 0 20px 0;
+      background: #eaf4ff;
+      margin-top: 35px;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -2px 12px #183b5a10;
     }
-    .footer a { color:var(--oro); font-weight:700; text-decoration:none;}
-    .footer a:hover {text-decoration:underline;}
-    .whatsapp-float {
-      position:fixed; bottom:22px; right:22px; z-index:99;
-      background:#25d366; color:#fff; border-radius:50%; width:54px; height:54px; display:flex; align-items:center; justify-content:center;
-      box-shadow:0 2px 13px #12943f52; font-size:2.15em; cursor:pointer; transition:box-shadow .13s;
-      border:3px solid #fff;
+    .footer a {
+      color: #227ac1;
+      text-decoration: underline;
+      margin: 0 6px;
+      font-weight: 600;
     }
-    .whatsapp-float:active { box-shadow:0 1px 7px #12943f83; }
-    /* ====== RESPONSIVE ====== */
-    @media (max-width:1050px){
-      .catalogo-section, .servicios-section, .porque-section {max-width:99vw;}
+    /* Responsive */
+    @media (max-width: 900px) {
+      .services-grid { gap: 15px;}
+      .why-grid { gap: 13px;}
+      .why-section { padding: 18px 2px 7px 2px;}
     }
-    @media (max-width:800px){
-      .hero-content { padding:32px 1vw 19px 1vw;}
-      .catalogo-section { padding:24px 1vw 14px 1vw;}
-    }
-    @media (max-width:700px){
-      .hero-banner{min-height:220px;}
-      .logo-main {width:54px;height:54px;}
-      .brand-title { font-size:1.17em; }
-      .catalogo-carrusel{gap:8px;}
-      .catalogo-item{min-width:202px;max-width:220px;}
-      .servicios-section{gap:8px;}
-      .servicio-card{padding:13px 7px 9px 7px;}
-    }
-    @media (max-width:540px){
-      .catalogo-carrusel{gap:7px;}
-      .catalogo-item{min-width:147px;max-width:200px;}
-      .porque-block{min-width:111px;padding:11px 6px;}
-      .hero-content{padding:16px 0 11px 0;}
-      .catalogo-section {padding:8px 0 8px 0;}
+    @media (max-width: 700px) {
+      .hero-title { font-size: 1.48em;}
+      .hero-desc, .hero-sub { font-size: 1.02em;}
+      .section-title { font-size: 1.08em;}
+      .solucion-integral {padding:13px 3px;}
+      .sol-item { min-width: 130px; font-size: 0.97em; padding: 9px 11px;}
+      .why-card, .service-card { width: 95vw; min-width: 0; }
+      .services-grid { flex-direction: column; align-items: center; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .video-wrap { max-width: 98vw; padding: 5px;}
+      .video-wrap video { min-height: 150px;}
     }
   </style>
 </head>
 <body>
-  <!-- HERO BANNER -->
-  <section class="hero-banner">
-    <div class="hero-content">
-      <div class="logo-main">
-        <img src="https://i.imgur.com/kf8e57F.jpg" alt="Logo Grupo AR" style="width:68px;">
+  <!-- HERO + VIDEO -->
+  <section class="hero">
+    <img src="https://i.imgur.com/kf8e57F.jpg" alt="Logo Grupo AR" class="logo-main">
+    <div class="hero-title">
+      Grupo AR | Construcción y Diseño
+    </div>
+    <div class="hero-desc">
+      Obra civil profesional en cadenas, franquicias y proyectos industriales.
+    </div>
+    <div class="hero-sub">
+      Desde Salamanca, Gto. a toda la República.
+    </div>
+    <div class="video-wrap">
+      <video src="https://imgur.com/2KTg9RF.mp4" autoplay loop muted playsinline preload="auto"></video>
+    </div>
+  </section>
+
+  <!-- SOLUCIÓN INTEGRAL -->
+  <div class="solucion-integral">
+    <div class="solucion-title"><span style="color:var(--azul)">Solución Integral:</span> Diseño, Obra Civil y Especialidades</div>
+    <ul class="solucion-list">
+      <li class="sol-item"><span class="icon-emoji">📐</span>Diseño Arquitectónico y Proyecto Ejecutivo</li>
+      <li class="sol-item"><span class="icon-emoji">🏗️</span>Obra Civil: cimentación, estructura, albañilería</li>
+      <li class="sol-item"><span class="icon-emoji">🔩</span>Soldadura, estructura metálica y racks industriales</li>
+      <li class="sol-item"><span class="icon-emoji">⚡</span>Electricidad industrial y residencial</li>
+      <li class="sol-item"><span class="icon-emoji">🚰</span>Plomería y fontanería profesional</li>
+      <li class="sol-item"><span class="icon-emoji">🧰</span>Mantenimiento y remodelaciones integrales</li>
+      <li class="sol-item"><span class="icon-emoji">🔄</span>Proyectos "llave en mano"</li>
+    </ul>
+  </div>
+
+  <!-- SERVICIOS -->
+  <div class="section-title"><span>Servicios Destacados</span></div>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="serv-icon-emoji">🏥</span>
+      <h3>Farmacias y Consultorios</h3>
+      <p>Especialistas en franquicias de farmacias, laboratorios, y consultorios llave en mano.</p>
+    </div>
+    <div class="service-card">
+      <span class="serv-icon-emoji">🏪</span>
+      <h3>OXXO y Tiendas de Conveniencia</h3>
+      <p>Proyectos para cadenas: construcción, remodelación y adecuaciones comerciales.</p>
+    </div>
+    <div class="service-card">
+      <span class="serv-icon-emoji">🏭</span>
+      <h3>Naves Industriales</h3>
+      <p>Desarrollo integral de naves industriales, desde cimentación a instalación eléctrica y acabados.</p>
+    </div>
+    <div class="service-card">
+      <span class="serv-icon-emoji">🏠</span>
+      <h3>Casas, Vivienda y Acabados</h3>
+      <p>Desde el diseño y obra civil hasta los mejores acabados y detalles arquitectónicos.</p>
+    </div>
+    <div class="service-card">
+      <span class="serv-icon-emoji">🧱</span>
+      <h3>Remodelación y Mantenimiento</h3>
+      <p>Mantenimientos preventivos y correctivos, remodelaciones integrales y ampliaciones.</p>
+    </div>
+  </div>
+
+  <!-- ¿POR QUÉ ELEGIRNOS? -->
+  <section class="why-section">
+    <div class="why-title">¿Por qué elegir <span style="color:var(--azul);font-weight:800;">Grupo AR</span>?</div>
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-emoji">👷‍♂️</span>
+        <h4>Profesionalismo y Experiencia</h4>
+        <p>Equipo altamente capacitado con años de experiencia en proyectos industriales y comerciales.</p>
       </div>
-      <div class="brand-title"><span class="highlight">Grupo AR</span> · Construcción y Diseño</div>
-      <div class="subtitle">Obra civil, franquicias, industria y particulares</div>
-      <div class="hero-desc">
-        <b>Solución integral para <span style="color:var(--rojo);">cadenas, farmacias, industria y particulares.</span></b><br>
-        Desde diseño hasta obra civil, instalaciones, soldadura, electricidad, plomería y más. <br>
-        <span style="color:var(--azul-vivo);font-weight:700;">Calidad, experiencia y cumplimiento garantizados.</span>
+      <div class="why-card">
+        <span class="why-emoji">📐</span>
+        <h4>Solución Integral</h4>
+        <p>Atendemos todo el proceso: diseño, obra civil, especialidades y acabados, ¡todo en un solo equipo!</p>
       </div>
-      <div class="cta-hero">
-        <a href="https://wa.me/524381346142?text=Hola%20quiero%20cotizar%20un%20proyecto%20con%20Grupo%20AR" target="_blank" class="cta-btn">¡Solicita tu proyecto!</a>
-        <a href="#catalogo" class="cta-btn catalogo">Ver catálogo/portafolio</a>
+      <div class="why-card">
+        <span class="why-emoji">⏰</span>
+        <h4>Entrega Puntual</h4>
+        <p>Cumplimos plazos sin sorpresas. Planificación y gestión para tu tranquilidad.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-emoji">🛡️</span>
+        <h4>Calidad y Garantía</h4>
+        <p>Solo materiales y mano de obra de alta calidad, con garantía real y respaldo.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-emoji">🏅</span>
+        <h4>Satisfacción Garantizada</h4>
+        <p>Clientes felices y recurrentes gracias a resultados impecables en cada proyecto.</p>
       </div>
     </div>
   </section>
-  
-  <!-- CATÁLOGO (CARRUSEL DESLIZABLE) -->
-  <section id="catalogo" class="catalogo-section">
-    <div class="catalogo-title">Portafolio de proyectos destacados</div>
-    <div class="catalogo-desc">Desliza para ver algunos de nuestros trabajos (franquicias, industria, comercios y más)</div>
-    <div class="catalogo-carrusel" id="catalogoCarrusel">
-      <!-- Repite .catalogo-item según tus proyectos -->
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/TFsNz7f.jpeg" alt="Farmacia Similares">
-        <div class="catalogo-caption">Farmacia Similares · Obra llave en mano</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/JKDQ0zH.jpeg" alt="Techado segundo piso">
-        <div class="catalogo-caption">Techado segundo piso · Residencial</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/Rss7uBW.jpeg" alt="Detalles Farmacia">
-        <div class="catalogo-caption">Detalles y acabados en consultorio</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/uBMUszz.jpeg" alt="Acero industrial">
-        <div class="catalogo-caption">Maniobra de acero · Industria</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/aXIZqUY.jpeg" alt="Transformadores">
-        <div class="catalogo-caption">Transformadores · Nave industrial</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/QQVwjMN.jpeg" alt="Impermeabilización">
-        <div class="catalogo-caption">Impermeabilización de losa · Gran escala</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/HPlLbbR.jpeg" alt="Barra y fregadero">
-        <div class="catalogo-caption">Barra & Fregadero · Acabados</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/37nbTWw.jpeg" alt="Cocina premium">
-        <div class="catalogo-caption">Cocina premium · Remodelación</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/ZFaZKQt.jpeg" alt="Panel Yeso Led">
-        <div class="catalogo-caption">Habitación con panel de yeso y LED</div>
-      </div>
-      <div class="catalogo-item">
-        <img src="https://i.imgur.com/Ne8aRhM.jpeg" alt="Centro de llenado agua">
-        <div class="catalogo-caption">Centro de llenado agua · Industrial</div>
-      </div>
+
+  <!-- PORTAFOLIO (EJEMPLOS) -->
+  <section class="portfolio-section">
+    <div class="portfolio-title">Portafolio de Proyectos</div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="https://i.imgur.com/jD57Scx.jpeg"><div class="portfolio-desc">Fachada y acabados de casa residencial</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="portfolio-desc">Apertura farmacia/consultorio Franquicia</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="portfolio-desc">Instalación eléctrica en nave industrial</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/QQVwjMN.jpeg"><div class="portfolio-desc">Impermeabilización profesional en losa</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/37nbTWw.jpeg"><div class="portfolio-desc">Diseño de cocina integral y acabados</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/cLTupmF.jpeg"><div class="portfolio-desc">Diseño y muros en panel de yeso</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/3E0cp5h.jpeg"><div class="portfolio-desc">Closet y panelería de alta estética</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/7gmOQe3.jpeg"><div class="portfolio-desc">Sobre firme para industria alimenticia</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/ZFaZKQt.jpeg"><div class="portfolio-desc">Remodelación de recámara en panel y luz led</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/Ne8aRhM.jpeg"><div class="portfolio-desc">Centro de llenado de agua</div></div>
     </div>
   </section>
-  
-  <!-- SERVICIOS PRINCIPALES -->
-  <section class="servicios-section">
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><rect x="8" y="18" width="32" height="22" rx="3" fill="#2681c3"/><rect x="14" y="10" width="20" height="8" rx="2.5" fill="#d4b16b"/><rect x="19" y="4" width="10" height="6" rx="1.8" fill="#d6422d"/></svg></div>
-      <div class="servicio-title">Obra Civil y Albañilería</div>
-      <div class="servicio-desc">Desde cimientos a acabados; precisión y durabilidad garantizadas.</div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>¿Listo para transformar tu proyecto?</h2>
+    <div class="cta-desc">
+      Solicita tu cotización sin compromiso y haz tu idea realidad con <span>Grupo AR</span>.
     </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><path d="M9 38l12-16 5 7 9-12" stroke="#2681c3" stroke-width="5" fill="none"/><circle cx="9" cy="38" r="4" fill="#d6422d"/><circle cx="21" cy="22" r="4" fill="#d4b16b"/><circle cx="26" cy="29" r="4" fill="#d4b16b"/><circle cx="35" cy="17" r="4" fill="#2681c3"/></svg></div>
-      <div class="servicio-title">Diseño Arquitectónico</div>
-      <div class="servicio-desc">Proyectos personalizados, renderizado y asesoría profesional.</div>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><rect x="6" y="16" width="36" height="16" rx="4" fill="#d4b16b"/><rect x="12" y="8" width="24" height="8" rx="2.5" fill="#2681c3"/><rect x="18" y="32" width="12" height="7" rx="1.7" fill="#d6422d"/></svg></div>
-      <div class="servicio-title">Soldadura y Estructuras</div>
-      <div class="servicio-desc">Estructuras metálicas, racks, techados y más; ingeniería segura.</div>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><rect x="10" y="24" width="28" height="10" rx="2" fill="#2681c3"/><rect x="13" y="14" width="22" height="10" rx="2.5" fill="#d4b16b"/><rect x="16" y="8" width="16" height="6" rx="1.7" fill="#d6422d"/></svg></div>
-      <div class="servicio-title">Electricidad Industrial</div>
-      <div class="servicio-desc">Alumbrado, subestaciones, automatización y cableado.</div>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><ellipse cx="24" cy="24" rx="18" ry="12" fill="#d4b16b"/><rect x="18" y="10" width="12" height="28" rx="3" fill="#2681c3"/></svg></div>
-      <div class="servicio-title">Plomería y Fontanería</div>
-      <div class="servicio-desc">Redes hidráulicas, sanitarias, bombas, sistemas presurizados.</div>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><rect x="14" y="18" width="20" height="14" rx="3" fill="#2681c3"/><rect x="19" y="10" width="10" height="8" rx="2.5" fill="#d4b16b"/><circle cx="24" cy="36" r="5" fill="#d6422d"/></svg></div>
-      <div class="servicio-title">Mantenimiento Integral</div>
-      <div class="servicio-desc">Programado, correctivo y preventivo con personal experto.</div>
-    </div>
-    <div class="servicio-card">
-      <div class="servicio-icon"><svg width="30" height="30" viewBox="0 0 48 48"><rect x="9" y="22" width="30" height="13" rx="3" fill="#d4b16b"/><rect x="13" y="12" width="22" height="10" rx="2.2" fill="#2681c3"/><circle cx="24" cy="38" r="6" fill="#d6422d"/></svg></div>
-      <div class="servicio-title">Remodelaciones</div>
-      <div class="servicio-desc">Actualización y transformación de espacios comerciales e industriales.</div>
-    </div>
-  </section>
-  
-  <!-- VIDEO PROYECTO -->
-  <section class="video-section">
-    <h3>¡Conoce cómo trabajamos!</h3>
-    <div class="video-responsive">
-      <video src="https://imgur.com/2KTg9RF.mp4" poster="https://i.imgur.com/kf8e57F.jpg" autoplay muted loop playsinline controls style="object-fit:cover;" id="videoDemo"></video>
-    </div>
-  </section>
-  
-  <!-- POR QUÉ ELEGIRNOS -->
-  <section class="porque-section">
-    <div class="porque-title">¿Por qué elegir Grupo AR?</div>
-    <div class="porque-grid">
-      <div class="porque-block"><svg fill="#d6422d"><circle cx="15" cy="15" r="13"/></svg> Franquicias y cadenas (<span class="tag">OXXO</span>, Farmacias...)</div>
-      <div class="porque-block"><svg fill="#d4b16b"><rect width="28" height="15" rx="4" y="5"/></svg> Industria, comercios y residenciales</div>
-      <div class="porque-block"><svg fill="#2681c3"><ellipse cx="14" cy="13" rx="13" ry="9"/></svg> Proyectos llave en mano</div>
-      <div class="porque-block"><svg fill="#d6422d"><rect width="30" height="14" rx="4" y="6"/></svg> Calidad estructural y garantía</div>
-      <div class="porque-block"><svg fill="#2681c3"><circle cx="15" cy="15" r="13"/></svg> Cobertura nacional</div>
-      <div class="porque-block"><svg fill="#d4b16b"><rect width="24" height="14" rx="5" y="7"/></svg> Satisfacción 100% asegurada</div>
-    </div>
-    <div style="margin-top:17px; color:#23405e;font-weight:500;">+15 años de experiencia · Ingeniería, obra, acabados y servicio al cliente top</div>
-  </section>
-  
-  <a href="https://wa.me/524381346142?text=Hola%20Grupo%20AR%20quiero%20informes%20de%20construcción" class="whatsapp-float" title="WhatsApp Grupo AR" target="_blank">
-    <svg width="34" height="34" viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#25d366"/><path fill="#fff" d="M30.1 25.2c-.4-.2-2.6-1.3-3-1.4-.4-.2-.7-.2-1 .2-.3.4-1.1 1.4-1.3 1.7-.2.2-.5.3-.9.1-2.4-.9-4-3.2-4.2-3.4-.2-.2 0-.6.2-.8.2-.2.4-.5.7-.7.2-.3.2-.5.3-.8 0-.2 0-.6-.1-.8-.1-.2-1-2.5-1.3-3.3-.4-.8-.7-.7-1-.7h-.8c-.3 0-.8.1-1.2.6s-1.6 1.6-1.6 3.9c0 .5.1 1.1.3 1.6.2.5 1 2 2.6 3.7 2.2 2.3 4.1 3 5 3.3.7.3 1.2.3 1.7.2.5-.1 1.6-.6 1.8-1.1.2-.5.2-1 .1-1.2z"/></svg>
-  </a>
-  <footer class="footer">
-    © 2024 Grupo AR · Construcción y Diseño Integral<br>
-    Salamanca, Gto. · Presencia nacional · <a href="https://wa.me/524381346142" target="_blank">WhatsApp</a>
-  </footer>
-  <script>
-    // Video autoplay robusto para móviles
-    window.onload = function(){
-      var video = document.getElementById("videoDemo");
-      if(video) {
-        video.muted = true; // iOS/Android require muted for autoplay
-        video.play().catch(()=>{});
-      }
-    }
-  </script>
+    <a class="cta-btn" href="https://wa.me/524381346142?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20con%20Grupo%20AR" target="_blank">
+      <span style="font-size:1.2em;margin-right:7px;">💬</span>Contactar por WhatsApp
+    </a>
+  </div>
+
+  <div class="footer">
+    Grupo AR Construcción y Diseño · Salamanca, Gto.<br>
+    <a href="mailto:grupoarconstrucciond@gmail.com">grupoarconstrucciond@gmail.com</a> ·
+    <a href="https://wa.me/524381346142">WhatsApp: +52 1 438 134 6142</a>
+  </div>
 </body>
 </html>
