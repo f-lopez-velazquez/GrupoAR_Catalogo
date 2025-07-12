@@ -3,259 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Grupo AR + JARA | Soluciones Integrales</title>
+  <title>Grupo AR · JARA | Construcción & Servicios Industriales</title>
+  <meta name="description" content="Solución integral: construcción, industria, izaje, titanes, estructuras, mantenimiento y más. Un solo equipo, todas las soluciones.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;500;400&display=swap" rel="stylesheet">
-  <meta name="description" content="Construcción, industria, izaje, titanes, estructura metálica y más. Salamanca, Gto. Presencia nacional.">
   <style>
     :root {
-      --azul: #163b57;
-      --azul2: #18568d;
-      --dorado: #e0af3d;
-      --bg: #f3f7fa;
-      --gris: #e8eef2;
+      --azul: #1c3651;
+      --azul-claro: #2987c5;
       --amarillo: #ffc531;
-      --white: #fff;
-      --transp: rgba(255,255,255,0.80);
+      --gris: #f2f6fa;
+      --fondo: #f7fafd;
+      --dorado: #e5b454;
+      --sombra: 0 7px 38px #14314815;
     }
-    html,body {height:100%;}
     body {
+      background: var(--fondo);
+      margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      margin:0; color:var(--azul);
-      background: var(--bg);
-      min-height:100vh;
-      overflow-x:hidden;
-    }
-    /* HERO con fondo wow animado */
-    .hero-bg {
-      position: fixed;
-      left: 0; top: 0; width: 100vw; height: 420px;
-      background: linear-gradient(120deg, #143052 63%, #e0af3d 145%);
-      z-index: 0;
-      animation: grad 8s ease-in-out infinite alternate;
-      filter: blur(0.5px) brightness(0.97);
-      transition:background 1s;
-    }
-    @keyframes grad {
-      0% {background-position:0% 50%;}
-      100% {background-position:100% 50%;}
+      color: var(--azul);
+      min-height: 100vh;
     }
     .hero {
-      position: relative; z-index: 1;
+      background: linear-gradient(145deg, #1c3651 68%, #e5b454 140%);
       text-align: center;
-      padding: 0 0 32px 0;
-      min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
+      padding: 0 0 35px 0;
     }
     .logo-main {
-      margin: 42px auto 14px auto;
+      margin: 32px auto 13px auto;
       display: block;
-      border-radius: 28px;
+      border-radius: 18px;
       background: #fff;
-      box-shadow: 0 4px 28px #14314821;
-      width: 120px;
-      padding: 12px;
+      box-shadow: 0 3px 28px #0e295115;
+      width: 112px;
+      padding: 11px;
       border: 4px solid var(--dorado);
-      z-index:2;
-      position:relative;
     }
     .hero-title {
-      font-size: 2.5em;
+      font-size: 2.25em;
       font-weight: 900;
       color: var(--amarillo);
-      margin-bottom: 0.18em;
-      text-shadow: 1px 2px 16px #14305225;
-      letter-spacing: 0.8px;
-      z-index:2;
-      position:relative;
-    }
-    .hero-desc {
-      color: #fff;
-      font-size: 1.21em;
-      font-weight: 600;
-      margin-bottom: 0.65em;
-      text-shadow: 0 2px 15px #12375d66;
-      z-index:2;
-      position:relative;
+      margin-bottom: 0.12em;
+      letter-spacing: 0.7px;
+      text-shadow: 1px 2px 8px #00172b2f;
     }
     .hero-sub {
-      color: #e6eef6;
-      font-size: 1.08em;
-      font-weight: 400;
-      margin-bottom: 22px;
-      text-shadow: 0 2px 14px #14305260;
-      z-index:2;
-      position:relative;
+      color: #fff;
+      font-size: 1.18em;
+      font-weight: 500;
+      margin-bottom: 18px;
+      text-shadow: 0 2px 12px #153d5d40;
     }
-    .empresas-unidas {
-      font-weight: 800;
-      color: var(--azul);
-      background: var(--transp);
-      display: inline-block;
-      border-radius: 12px;
-      margin: 17px auto 10px auto;
-      font-size: 1.15em;
-      letter-spacing: .1em;
-      box-shadow: 0 2px 8px #14305213;
-      z-index:2;
-      position:relative;
-      padding:5px 14px;
-    }
-    .empresas-unidas span {
-      color: var(--dorado);
-      font-weight: 900;
+    .hero-desc {
+      color: #e6e5f7;
+      font-size: 1.11em;
+      font-weight: 600;
+      margin-bottom: 1.4em;
+      text-shadow: 0 2px 10px #163c4d35;
     }
     .video-wrap {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0 auto 22px auto;
-      background: var(--transp);
+      margin: 0 auto 23px auto;
+      background: #fff;
       border-radius: 20px;
-      box-shadow: 0 2px 18px #12375d15;
+      box-shadow: var(--sombra);
       max-width: 440px;
-      padding: 10px 10px 6px 10px;
-      z-index:2;
-      position:relative;
+      padding: 11px 13px 5px 13px;
     }
     .video-wrap video {
       width: 100%;
       max-width: 400px;
-      min-height: 210px;
+      min-height: 215px;
       border-radius: 15px;
       object-fit: cover;
-      box-shadow: 0 2px 17px #0a284422;
-      background: #143052;
+      box-shadow: 0 2px 13px #0a284420;
     }
-    /* Solución Integral */
+    /* SOLUCIÓN INTEGRAL */
     .solucion-integral {
       background: #fff;
-      margin: 0 auto 32px auto;
-      max-width: 1100px;
-      border-radius: 16px;
-      box-shadow: 0 2px 22px #d9d5c915;
-      padding: 26px 13px 15px 13px;
+      margin: 0 auto 30px auto;
+      max-width: 1050px;
+      border-radius: 18px;
+      box-shadow: var(--sombra);
+      padding: 22px 10px 13px 10px;
       text-align: center;
-      position:relative;
-      z-index:2;
-      animation: fadein .7s;
-    }
-    @keyframes fadein {
-      0% { opacity:0; transform:translateY(30px);}
-      100%{ opacity:1; transform:translateY(0);}
     }
     .solucion-title {
-      font-size: 1.21em;
-      font-weight: 700;
-      color: var(--azul);
-      margin-bottom: 13px;
-      letter-spacing: .3px;
+      font-size: 1.35em;
+      font-weight: 800;
+      color: var(--azul-claro);
+      margin-bottom: 12px;
     }
     .solucion-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px 22px;
+      gap: 16px 23px;
       justify-content: center;
       margin: 0 auto;
-      max-width: 1050px;
+      max-width: 950px;
       padding: 0;
       list-style: none;
     }
     .sol-item {
       display: flex;
       align-items: center;
-      gap: 13px;
-      font-size: 1.09em;
-      background: #e9f2fb;
-      color: #1c2332;
-      border-radius: 12px;
-      padding: 13px 22px 12px 13px;
-      min-width: 175px;
+      gap: 10px;
+      font-size: 1.11em;
+      background: #f4f8fc;
+      color: var(--azul);
+      border-radius: 11px;
+      padding: 10px 22px 9px 12px;
+      min-width: 183px;
       font-weight: 600;
-      box-shadow: 0 2px 9px #1c508113;
+      box-shadow: 0 2px 8px #1c508112;
       margin-bottom: 0;
-      transition: box-shadow .16s, transform .13s;
-      animation: fadein .9s cubic-bezier(.29,.9,.43,1.21);
+      justify-content: flex-start;
     }
-    .sol-item:hover {box-shadow:0 4px 18px #18446927;transform:scale(1.05);}
-    .sol-item svg {
-      width: 32px;
-      height: 32px;
+    .sol-item .emoji {
+      font-size: 1.6em;
       flex-shrink: 0;
     }
-    /* Servicios destacados */
+    /* SERVICIOS DESTACADOS */
     .section-title {
       text-align: center;
-      font-size: 1.35em;
+      font-size: 1.42em;
       font-weight: 800;
-      margin: 36px 0 15px 0;
+      margin: 36px 0 13px 0;
       color: var(--azul);
       letter-spacing: 0.5px;
     }
-    .section-title span { color: var(--amarillo);}
+    .section-title span {
+      color: var(--amarillo);
+    }
     .services-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 26px;
       justify-content: center;
-      margin-bottom: 24px;
+      margin-bottom: 27px;
     }
     .service-card {
       background: #fff;
-      border-radius: 17px;
-      box-shadow: 0 2px 13px #183b5a10;
-      padding: 26px 20px 18px 20px;
-      width: 250px;
-      min-height: 205px;
+      border-radius: 19px;
+      box-shadow: 0 2px 14px #183b5a11;
+      padding: 22px 23px 17px 23px;
+      width: 265px;
+      min-height: 235px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       transition: transform .13s;
       position: relative;
-      animation: fadein .9s cubic-bezier(.19,.9,.23,1.13);
     }
     .service-card:hover {
-      transform: translateY(-8px) scale(1.045);
-      box-shadow: 0 9px 33px #12375d29;
+      transform: translateY(-7px) scale(1.034);
+      box-shadow: 0 9px 34px #164b5c17;
     }
     .serv-icon {
-      width: 56px; height: 56px; margin-bottom: 12px;
-      filter: drop-shadow(0 2px 10px #aaa2);
+      font-size: 2.5em;
+      margin-bottom: 13px;
     }
     .service-card h3 {
-      margin: 0 0 8px 0;
-      font-size: 1.08em;
-      color: var(--azul2);
+      margin: 0 0 7px 0;
+      font-size: 1.15em;
+      color: var(--azul-claro);
       font-weight: 700;
     }
     .service-card p {
-      color: #34445d;
-      font-size: .98em;
+      color: #35506d;
+      font-size: .99em;
       font-weight: 400;
       margin: 0;
     }
-    /* ¿Por qué elegirnos? */
+    /* ¿POR QUÉ ELEGIRNOS? */
     .why-section {
-      margin: 44px auto 20px auto;
-      max-width: 1150px;
-      background: linear-gradient(90deg, #f9f9f9 73%, #e3edf7 100%);
-      border-radius: 18px;
-      padding: 30px 15px 12px 15px;
-      box-shadow: 0 4px 27px #0e31571c;
-      position:relative;
-      z-index:2;
-      animation: fadein 1s;
+      margin: 46px auto 23px auto;
+      max-width: 1170px;
+      background: linear-gradient(110deg, #f9fafd 60%, #e3edf7 100%);
+      border-radius: 20px;
+      padding: 30px 15px 16px 15px;
+      box-shadow: var(--sombra);
     }
     .why-title {
       text-align: center;
-      font-size: 1.18em;
+      font-size: 1.27em;
       font-weight: 700;
-      color: var(--azul-osc);
-      margin-bottom: 18px;
-      letter-spacing: .51px;
+      color: var(--azul);
+      margin-bottom: 15px;
+      letter-spacing: .3px;
     }
     .why-grid {
       display: flex;
@@ -265,161 +202,114 @@
     }
     .why-card {
       background: #fff;
-      border-radius: 14px;
-      padding: 20px 17px 13px 17px;
-      box-shadow: 0 2px 14px #153b6116;
-      width: 213px;
+      border-radius: 15px;
+      padding: 19px 19px 13px 19px;
+      box-shadow: 0 2px 12px #153b6120;
+      width: 246px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: box-shadow .14s, transform .12s;
+      transition: box-shadow .12s, transform .11s;
       position: relative;
-      animation: fadein .6s cubic-bezier(.19,.9,.23,1.13);
     }
     .why-card:hover {
-      box-shadow: 0 8px 26px #1a488120;
-      transform: translateY(-7px) scale(1.037);
+      box-shadow: 0 10px 33px #1a48811c;
+      transform: translateY(-4px) scale(1.029);
     }
-    .why-icon {
-      width: 47px; height: 47px; margin-bottom: 12px;
-      display: block;
+    .why-emoji {
+      font-size: 2.3em;
+      margin-bottom: 8px;
     }
     .why-card h4 {
-      color: var(--azul);
+      color: var(--azul-claro);
       font-weight: 700;
-      margin-bottom: 7px; margin-top:0;
-      font-size: 1.11em;
+      margin-bottom: 6px; margin-top:0;
+      font-size: 1.13em;
     }
     .why-card p {
-      color: #36536c;
-      font-size: .98em;
+      color: #2d4364;
+      font-size: .99em;
       font-weight: 500;
       margin: 0;
     }
-    /* PORTAFOLIO CARRUSEL */
+    /* PORTAFOLIO DESLIZABLE */
     .portfolio-section {
-      max-width: 1200px;
-      margin: 56px auto 23px auto;
-      padding: 0 6px;
-      text-align:center;
-      position:relative;
-      z-index:2;
-      animation: fadein 1.3s;
+      max-width: 1120px;
+      margin: 42px auto 20px auto;
+      padding: 0 8px;
     }
     .portfolio-title {
-      font-size: 1.17em;
+      font-size: 1.18em;
       font-weight: 700;
-      color: var(--azul-osc);
-      margin-bottom: 20px;
+      color: var(--azul);
+      margin-bottom: 16px;
       text-align: center;
-      letter-spacing: .18px;
+      letter-spacing: .2px;
     }
-    .carousel-outer {
-      position: relative;
-      margin: 0 auto;
-      max-width: 1100px;
-    }
-    .carousel-container {
+    .portfolio-slider {
       display: flex;
       overflow-x: auto;
-      scroll-snap-type: x mandatory;
       gap: 18px;
-      padding-bottom: 13px;
-      scrollbar-width: thin;
-      scrollbar-color: var(--azul2) #e7eaf3;
-      transition: box-shadow .12s;
+      padding-bottom: 10px;
+      scroll-snap-type: x mandatory;
     }
     .portfolio-item {
+      flex: 0 0 320px;
       background: #fff;
-      border-radius: 13px;
-      box-shadow: 0 2px 12px #b0c2d523;
-      min-width: 255px;
-      max-width: 285px;
-      flex: 0 0 265px;
+      border-radius: 14px;
+      box-shadow: 0 2px 14px #b0c2d521;
       overflow: hidden;
-      transition: box-shadow .13s, transform .13s;
+      transition: box-shadow .12s;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: stretch;
       scroll-snap-align: start;
-      animation: fadein .7s cubic-bezier(.29,.8,.43,1.11);
+      min-width: 300px;
+      max-width: 340px;
     }
     .portfolio-item img {
       width: 100%;
-      height: 144px;
+      height: 185px;
       object-fit: cover;
-      background: #f4f8fa;
-      border-bottom: 1.5px solid #e2e9f3;
-      transition: filter .2s;
+      border-bottom: 1.2px solid #e2e9f3;
     }
     .portfolio-desc {
-      padding: 12px 12px 7px 13px;
+      padding: 13px 10px 9px 15px;
       font-size: 1.01em;
       color: #294259;
       font-weight: 500;
+      min-height: 48px;
     }
-    .carousel-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #fff;
-      border-radius: 50%;
-      width: 41px; height: 41px;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 2px 11px #1c50813b;
-      border: 2px solid var(--azul2);
-      cursor: pointer;
-      z-index: 8;
-      transition: background .13s;
-      font-size: 1.8em;
-      color: var(--azul2);
-      user-select: none;
-    }
-    .carousel-arrow:active { background: #f4e6c1;}
-    .carousel-arrow.left { left: -16px;}
-    .carousel-arrow.right { right: -16px;}
-    @media (max-width: 1050px) {
-      .portfolio-item { min-width: 92vw; max-width: 93vw;}
-      .carousel-arrow.left { left: 0;}
-      .carousel-arrow.right { right: 0;}
-    }
-    @media (max-width: 650px) {
-      .hero-title { font-size: 1.24em;}
-      .empresas-unidas {font-size:.93em;}
-      .video-wrap { max-width: 97vw;}
-      .solucion-title { font-size: 1.01em;}
-      .section-title { font-size: 1em;}
-      .service-card, .why-card { width: 94vw;}
-      .portfolio-item { min-width: 95vw; max-width: 95vw;}
-    }
-    /* CTA y Footer */
+    /* CTA */
     .cta {
-      margin: 63px auto 0 auto;
-      padding: 38px 13px 28px 13px;
-      background: linear-gradient(90deg, #2168a7 74%, #143052 100%);
-      border-radius: 23px;
+      margin: 54px auto 0 auto;
+      padding: 32px 13px 26px 13px;
+      background: linear-gradient(93deg, #2688c9 74%, #efd276 100%);
+      border-radius: 22px;
       text-align: center;
-      box-shadow: 0 2px 19px #14305223;
-      max-width: 950px;
+      box-shadow: 0 2px 19px #153c5c17;
+      max-width: 820px;
       color: #fff;
-      position:relative; z-index:2;
     }
     .cta h2 {
-      font-size: 1.32em;
-      font-weight: 800;
-      color: var(--amarillo);
-      margin-bottom: 11px;
+      font-size: 1.48em;
+      font-weight: 900;
+      color: #fffde8;
+      margin-bottom: 13px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 2px 8px #0e1e2b39;
     }
     .cta-desc {
-      font-size: 1.09em;
+      font-size: 1.13em;
       margin-bottom: 13px;
-      color: #fff;
+      color: #f6f2e7;
+      font-weight: 500;
     }
     .cta-desc span {
-      color: var(--amarillo);
-      font-weight: 700;
+      color: var(--dorado);
+      font-weight: 800;
     }
     .cta-btn {
       display: inline-flex;
@@ -427,12 +317,12 @@
       background: var(--amarillo);
       color: #144163;
       font-weight: 700;
-      font-size: 1.11em;
-      padding: 13px 27px 13px 19px;
+      font-size: 1.13em;
+      padding: 13px 27px 13px 18px;
       border-radius: 13px;
       text-decoration: none;
-      box-shadow: 0 3px 15px #27495c25;
-      transition: background .13s, color .14s, box-shadow .13s;
+      box-shadow: 0 3px 17px #27495c19;
+      transition: background .12s, color .13s, box-shadow .12s;
       margin-top: 7px;
       margin-bottom: 5px;
       border: none;
@@ -440,24 +330,23 @@
     .cta-btn:hover {
       background: #ffd764;
       color: #003c6a;
-      box-shadow: 0 7px 27px #14416335;
-      transform: scale(1.05);
+      box-shadow: 0 7px 24px #14416329;
+      transform: scale(1.04);
     }
-    .cta-icon {
-      width: 26px;
-      height: 26px;
-      margin-right: 12px;
+    .cta-emoji {
+      font-size: 1.4em;
+      margin-right: 11px;
     }
+    /* Footer */
     .footer {
       text-align: center;
-      font-size: 1em;
+      font-size: 1.04em;
       color: #435a7b;
-      padding: 24px 0 20px 0;
+      padding: 23px 0 20px 0;
       background: #eaf4ff;
-      margin-top: 36px;
-      border-radius: 21px 21px 0 0;
-      box-shadow: 0 -2px 12px #183b5a10;
-      position:relative;z-index:2;
+      margin-top: 38px;
+      border-radius: 20px 20px 0 0;
+      box-shadow: 0 -2px 12px #183b5a0f;
     }
     .footer a {
       color: #227ac1;
@@ -465,22 +354,41 @@
       margin: 0 6px;
       font-weight: 600;
     }
+    @media (max-width: 900px) {
+      .services-grid { gap: 14px;}
+      .why-grid { gap: 12px;}
+      .why-section { padding: 16px 2px 7px 2px;}
+      .portfolio-item { min-width: 240px; max-width: 255px;}
+      .portfolio-item img { height: 145px;}
+    }
+    @media (max-width: 650px) {
+      .hero-title { font-size: 1.11em;}
+      .hero-sub, .hero-desc { font-size: .98em;}
+      .section-title { font-size: 1.06em;}
+      .solucion-integral {padding:13px 3px;}
+      .sol-item { min-width: 120px; font-size: 0.95em; padding: 8px 10px;}
+      .why-card, .service-card { width: 96vw; min-width: 0; }
+      .services-grid { flex-direction: column; align-items: center; }
+      .portfolio-slider { gap: 8px;}
+      .portfolio-item { min-width: 89vw; max-width: 99vw;}
+      .video-wrap { max-width: 98vw; padding: 5px;}
+      .video-wrap video { min-height: 120px;}
+    }
   </style>
 </head>
 <body>
-  <div class="hero-bg"></div>
   <!-- HERO + VIDEO -->
   <section class="hero">
-    <img src="https://i.imgur.com/Umfy7DE.jpeg" alt="Logo Grupo AR + JARA" class="logo-main">
-    <div class="hero-title">Grupo AR + JARA</div>
+    <img src="https://i.imgur.com/Umfy7DE.jpeg" alt="Logo Grupo AR JARA" class="logo-main">
+    <div class="hero-title">
+      Grupo AR · JARA<br>Construcción & Servicios Industriales
+    </div>
     <div class="hero-desc">
-      Construcción · Industria · Izaje · Soluciones integrales llave en mano
+      Solución integral en construcción, industria, izaje, estructuras y mantenimiento.<br>
+      <b>Un solo equipo para todo México.</b>
     </div>
     <div class="hero-sub">
-      Salamanca, Gto. · Bajío y toda la República Mexicana
-    </div>
-    <div class="empresas-unidas">
-      <span>Unión líder:</span> Obra civil · Estructura metálica · Izaje · Titanes · Especialidades · Mantenimiento industrial
+      Desde Salamanca, Gto. · Presencia nacional · Experiencia certificada
     </div>
     <div class="video-wrap">
       <video src="https://imgur.com/2KTg9RF.mp4" autoplay loop muted playsinline preload="auto"></video>
@@ -489,175 +397,148 @@
 
   <!-- SOLUCIÓN INTEGRAL -->
   <div class="solucion-integral">
-    <div class="solucion-title">Solución integral y servicios especializados para proyectos de cualquier escala</div>
+    <div class="solucion-title">Solución Integral para Industria & Construcción</div>
     <ul class="solucion-list">
-      <li class="sol-item">
-        <!-- Icono diseño -->
-        <svg fill="#18568d" viewBox="0 0 40 40"><path d="M7 33v-2h26v2H7Zm0-5v-2h17v2H7Zm0-5v-2h26v2H7ZM7 8V6h26v2H7Zm6 15v-9h2v9h-2Zm6 0v-13h2v13h-2Zm6 0v-6h2v6h-2Z"/></svg>
-        Diseño arquitectónico, ingeniería y modelado
-      </li>
-      <li class="sol-item">
-        <!-- Icono obra civil -->
-        <svg fill="#e0af3d" viewBox="0 0 40 40"><path d="M7 31v-9h3v9H7Zm6 0V18h3v13h-3Zm6 0v-6h3v6h-3Zm6 0v-10h3v10h-3ZM5 36V8h30v28H5Zm2-2h26V10H7v24Z"/></svg>
-        Obra civil, cimentación, estructura, albañilería
-      </li>
-      <li class="sol-item">
-        <!-- Icono estructura/soldadura -->
-        <svg fill="#18568d" viewBox="0 0 40 40"><rect x="9" y="20" width="22" height="6" rx="2"/><path d="M20 20V9"/><circle cx="20" cy="9" r="2"/><rect x="14" y="26" width="12" height="6" rx="2"/></svg>
-        Estructuras metálicas, soldadura y pailería industrial
-      </li>
-      <li class="sol-item">
-        <!-- Icono electricidad -->
-        <svg fill="#e0af3d" viewBox="0 0 40 40"><path d="m20 34 10-18h-8l2-10-10 18h8l-2 10Z"/></svg>
-        Electricidad industrial y residencial
-      </li>
-      <li class="sol-item">
-        <!-- Icono plomería -->
-        <svg fill="#18568d" viewBox="0 0 40 40"><path d="M16 32q-2.1 0-3.55-1.45Q11 29.1 11 27v-8q0-.6.4-1t1-.4q.6 0 1 .4t.4 1v8q0 .8.575 1.375Q15 31 16 31q.825 0 1.413-.587Q18 29.825 18 29V14h-2q-.825 0-1.413-.587Q14 12.825 14 12V8q0-.6.4-1t1-.4q.6 0 1 .4t.4 1v4h2q.825 0 1.413.587Q20 13.175 20 14v15q0 2.1-1.45 3.55Q17.1 32 16 32Z"/></svg>
-        Plomería, instalaciones y acero inoxidable alimenticio
-      </li>
-      <li class="sol-item">
-        <!-- Icono mantenimiento -->
-        <svg fill="#e0af3d" viewBox="0 0 40 40"><path d="M20 37q-4.25 0-7.125-2.875T10 27q0-2.6 1.375-4.65T16 18V9q0-2.1 1.45-3.55Q18.9 4 21 4t3.55 1.45Q26 6.9 26 9v9q2.25 1.7 3.625 3.75T30 27q0 4.25-2.875 7.125T20 37Z"/></svg>
-        Mantenimiento industrial, remodelación y sand-blast
-      </li>
-      <li class="sol-item">
-        <!-- Icono llave en mano -->
-        <svg fill="#18568d" viewBox="0 0 40 40"><rect x="10" y="20" width="20" height="10" rx="2"/><rect x="15" y="12" width="10" height="8" rx="2"/></svg>
-        Proyectos llave en mano, izaje y titanes
-      </li>
+      <li class="sol-item"><span class="emoji">📐</span> Diseño arquitectónico & estructural</li>
+      <li class="sol-item"><span class="emoji">🏗️</span> Obra civil y cimentaciones</li>
+      <li class="sol-item"><span class="emoji">🦾</span> Fabricación y montaje de estructuras metálicas</li>
+      <li class="sol-item"><span class="emoji">🛠️</span> Soldadura y pailería industrial</li>
+      <li class="sol-item"><span class="emoji">🔩</span> Titanes y grúas para izaje/montaje</li>
+      <li class="sol-item"><span class="emoji">⚡</span> Electricidad industrial y automatización</li>
+      <li class="sol-item"><span class="emoji">🚚</span> Flotilla de maquinaria y renta de equipo</li>
+      <li class="sol-item"><span class="emoji">🧯</span> Mantenimiento industrial & obra nueva</li>
+      <li class="sol-item"><span class="emoji">🧼</span> Acero inoxidable grado alimenticio</li>
+      <li class="sol-item"><span class="emoji">🏢</span> Remodelación, ampliaciones y pintura</li>
+      <li class="sol-item"><span class="emoji">🛡️</span> Certificación, seguridad y garantía</li>
     </ul>
   </div>
 
-  <!-- SERVICIOS -->
-  <div class="section-title"><span>Servicios Destacados</span></div>
+  <!-- SERVICIOS DESTACADOS -->
+  <div class="section-title"><span>Servicios Especializados</span></div>
   <div class="services-grid">
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3846/3846597.png" class="serv-icon" alt="Consultorios y Farmacias">
-      <h3>Farmacias y Consultorios</h3>
-      <p>Construcción y adecuación profesional para cadenas, franquicias y clínicas de salud.</p>
+      <div class="serv-icon">🏥</div>
+      <h3>Farmacias & Consultorios</h3>
+      <p>Construcción profesional de franquicias, clínicas y cadenas médicas llave en mano.</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" class="serv-icon" alt="Cadenas de tiendas OXXO y tiendas de conveniencia">
-      <h3>Cadenas y Comercio</h3>
-      <p>OXXO, conveniencia, tiendas especializadas: obra civil, remodelación y montaje.</p>
+      <div class="serv-icon">🏪</div>
+      <h3>Cadenas & Comercio</h3>
+      <p>OXXO, conveniencia, tiendas: obra civil, remodelación, montajes y apertura de sucursales.</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3625/3625005.png" class="serv-icon" alt="Naves industriales">
+      <div class="serv-icon">🏭</div>
       <h3>Naves Industriales</h3>
-      <p>Desarrollo completo, cimentación, titanes, estructura y acabados industriales.</p>
+      <p>Proyectos completos de naves: cimentación, titanes, estructuras y acabados industriales.</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2179/2179685.png" class="serv-icon" alt="Estructuras Metálicas">
+      <div class="serv-icon">🏗️</div>
       <h3>Estructura & Pailería</h3>
-      <p>Fabricación, soldadura y montaje de estructuras metálicas, racks y tanques.</p>
+      <p>Fabricación, soldadura y montaje de estructuras metálicas, racks, tanques y maquinaria.</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2530/2530203.png" class="serv-icon" alt="Remodelación y mantenimiento">
-      <h3>Remodelación y Mantenimiento</h3>
-      <p>Mantenimiento industrial, ampliaciones, sand-blast, pintura profesional.</p>
+      <div class="serv-icon">🧰</div>
+      <h3>Remodelación & Mantenimiento</h3>
+      <p>Ampliaciones, sand-blast, pintura profesional y mantenimiento industrial programado.</p>
     </div>
     <div class="service-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2922/2922791.png" class="serv-icon" alt="Equipo pesado y titanes">
+      <div class="serv-icon">🚚</div>
       <h3>Titanes & Izaje</h3>
-      <p>Flotilla de titanes, grúas y maniobras para izaje y movimientos industriales.</p>
+      <p>Flotilla de titanes, grúas y maniobras para izaje, montaje y movimientos industriales.</p>
+    </div>
+    <div class="service-card">
+      <div class="serv-icon">🥫</div>
+      <h3>Acero inoxidable</h3>
+      <p>Fabricación de muebles y equipos industriales de acero inoxidable grado alimenticio.</p>
+    </div>
+    <div class="service-card">
+      <div class="serv-icon">🔌</div>
+      <h3>Electricidad & Automatización</h3>
+      <p>Instalaciones eléctricas industriales, automatización y subestaciones para cualquier sector.</p>
     </div>
   </div>
 
-  <!-- ¿POR QUÉ ELEGIRNOS? -->
+  <!-- ¿POR QUÉ ELEGIR NUESTRA ALIANZA? -->
   <section class="why-section">
-    <div class="why-title">¿Por qué elegir <span style="color:var(--azul);font-weight:800;">nuestra alianza?</span></div>
+    <div class="why-title">¿Por qué elegir <b>nuestra alianza</b>?</div>
     <div class="why-grid">
       <div class="why-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991146.png" class="why-icon" alt="Profesionalismo y experiencia">
+        <span class="why-emoji">🏅</span>
         <h4>Profesionalismo & Experiencia</h4>
-        <p>Equipo certificado y con amplia experiencia en industria, construcción y proyectos de alto nivel.</p>
+        <p>Equipo certificado y con experiencia real en industria y construcción de alto nivel.</p>
       </div>
       <div class="why-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3388/3388951.png" class="why-icon" alt="Titan y maquinaria pesada">
+        <span class="why-emoji">🚚</span>
         <h4>Titanes & Maquinaria Propia</h4>
-        <p>Flotilla propia para izaje, montaje y maniobras de gran escala en todo México.</p>
+        <p>Flotilla propia para izaje, montaje y maniobras industriales en toda la República.</p>
       </div>
       <div class="why-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2662/2662503.png" class="why-icon" alt="Solución integral">
+        <span class="why-emoji">🤝</span>
         <h4>Solución 100% Integral</h4>
-        <p>Desde el diseño y fabricación, hasta el montaje, obra civil y mantenimiento: todo en un solo equipo.</p>
+        <p>Desde el diseño hasta la obra civil, titanes, montaje y mantenimiento: todo en un solo equipo.</p>
       </div>
       <div class="why-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2948/2948037.png" class="why-icon" alt="Entrega a tiempo">
+        <span class="why-emoji">⏱️</span>
         <h4>Entrega y Cumplimiento</h4>
         <p>Cumplimiento estricto de plazos, gestión profesional y seguridad total en cada proyecto.</p>
       </div>
       <div class="why-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" class="why-icon" alt="Certificados y garantía">
+        <span class="why-emoji">⭐</span>
         <h4>Certificación & Garantía</h4>
         <p>Cumplimos OSHA, NOM, ANSI, ASME y brindamos garantía y calidad respaldada.</p>
       </div>
     </div>
   </section>
 
-  <!-- PORTAFOLIO CARRUSEL -->
+  <!-- PORTAFOLIO DESLIZABLE -->
   <section class="portfolio-section">
-    <div class="portfolio-title">Portafolio Destacado de la Alianza</div>
-    <div class="carousel-outer">
-      <div class="carousel-arrow left" onclick="scrollPortfolio(-1)">&#8592;</div>
-      <div class="carousel-container" id="portfolio-carousel">
-        <div class="portfolio-item"><img src="https://i.imgur.com/P3xrk9d.jpeg"><div class="portfolio-desc">Izaje de contenedor metálico con titán propio · Proyecto industrial</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/p77wqn1.jpeg"><div class="portfolio-desc">Maniobra y colocación de gran contenedor industrial</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/QPdiquP.jpeg"><div class="portfolio-desc">Montaje y fabricación de estructura de lámina pesada</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/YbkgaeN.jpeg"><div class="portfolio-desc">Soldadura profesional en estructura de rack industrial</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/1Kd5cV9.jpeg"><div class="portfolio-desc">Ingeniería y modelado digital de estructura metálica</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/fhTkrbk.jpeg"><div class="portfolio-desc">Contenedor industrial en operación · Acero de alta resistencia</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/NNecFzA.jpeg"><div class="portfolio-desc">Máquina soldada para industria alimenticia</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/Aj5aN7R.jpeg"><div class="portfolio-desc">Racks móviles y estructura tipo reja · Solución integral</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/xvCib6j.jpeg"><div class="portfolio-desc">Techado y estructura en nave industrial/bodega</div></div>
-        <div class="portfolio-item"><img src="http://i.imgur.com/D8JhjQx.jpeg"><div class="portfolio-desc">Flotilla de Titanes · Alianza AR+JARA para izaje</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/TQYpJMU.jpeg"><div class="portfolio-desc">Garrocha y levantamiento de estructuras pesadas</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/vQ3tXYB.jpeg"><div class="portfolio-desc">Armado y ensamblaje de estructuras metálicas a medida</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/NRrYuNF.jpeg"><div class="portfolio-desc">Fabricación de maquinaria en acero inoxidable alimenticio</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/1gqzFyl.jpeg"><div class="portfolio-desc">Soldado de grandes pipas y contenedores industriales</div></div>
-        <!-- Grupo AR obras clásicas -->
-        <div class="portfolio-item"><img src="https://i.imgur.com/jD57Scx.jpeg"><div class="portfolio-desc">Fachada, acabados y detalles arquitectónicos · Residencial</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="portfolio-desc">Apertura de franquicia farmacia/consultorio · Llave en mano</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="portfolio-desc">Instalación eléctrica y transformadores · Nave industrial</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/QQVwjMN.jpeg"><div class="portfolio-desc">Impermeabilización profesional en gran losa</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/37nbTWw.jpeg"><div class="portfolio-desc">Diseño de cocina integral, acabados y detalles premium</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/cLTupmF.jpeg"><div class="portfolio-desc">Muros, panelería y diseño interior moderno</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/3E0cp5h.jpeg"><div class="portfolio-desc">Closet y mobiliario de alta estética en panel</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/7gmOQe3.jpeg"><div class="portfolio-desc">Sobre firme y obra civil para industria alimenticia</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/ZFaZKQt.jpeg"><div class="portfolio-desc">Remodelación de recámara: panel, iluminación y confort</div></div>
-        <div class="portfolio-item"><img src="https://i.imgur.com/Ne8aRhM.jpeg"><div class="portfolio-desc">Centro de llenado de agua industrial · Proyecto llave en mano</div></div>
-      </div>
-      <div class="carousel-arrow right" onclick="scrollPortfolio(1)">&#8594;</div>
+    <div class="portfolio-title">Trabajos Destacados</div>
+    <div class="portfolio-slider">
+      <div class="portfolio-item"><img src="https://i.imgur.com/TFsNz7f.jpeg"><div class="portfolio-desc">Farmacia y consultorio franquicia, apertura llave en mano.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/KmV6LpG.jpeg"><div class="portfolio-desc">Soldadura industrial: armado y racks en planta.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/uBMUszz.jpeg"><div class="portfolio-desc">Izaje de estructura de acero con titán.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/p77wqn1.jpeg"><div class="portfolio-desc">Maniobra de titán para contenedor industrial con desfogues.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/P3xrk9d.jpeg"><div class="portfolio-desc">Colocación de contenedor metálico con pluma hidráulica.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/QPdiquP.jpeg"><div class="portfolio-desc">Estructura de placas de acero para nave industrial.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/YbkgaeN.jpeg"><div class="portfolio-desc">Soldadura en obra para tanque y contenedores industriales.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/1Kd5cV9.jpeg"><div class="portfolio-desc">Diseño y modelado estructural con software especializado.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/fhTkrbk.jpeg"><div class="portfolio-desc">Montaje y operación de gran contenedor en planta.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/NNecFzA.jpeg"><div class="portfolio-desc">Máquina soldada para exceso de producción industrial.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/Aj5aN7R.jpeg"><div class="portfolio-desc">Racks móviles y estructura para logística de almacén.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/xvCib6j.jpeg"><div class="portfolio-desc">Techado de nave industrial para almacenaje.</div></div>
+      <div class="portfolio-item"><img src="http://i.imgur.com/D8JhjQx.jpeg"><div class="portfolio-desc">Flotilla de titanes: maniobra y transporte especializado.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/TQYpJMU.jpeg"><div class="portfolio-desc">Levantamiento y montaje de estructura con garrocha.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/vQ3tXYB.jpeg"><div class="portfolio-desc">Ensamblado de estructuras metálicas en taller.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/NRrYuNF.jpeg"><div class="portfolio-desc">Fabricación de maquinaria en acero grado alimenticio.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/1gqzFyl.jpeg"><div class="portfolio-desc">Soldadura en grandes pipas y contenedores industriales.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/aXIZqUY.jpeg"><div class="portfolio-desc">Instalación eléctrica: transformadores en nave industrial.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/QQVwjMN.jpeg"><div class="portfolio-desc">Impermeabilización profesional en losa de gran tamaño.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/37nbTWw.jpeg"><div class="portfolio-desc">Cocina industrial de diseño y acabados de alta estética.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/cLTupmF.jpeg"><div class="portfolio-desc">Paneles de yeso y muros con diseño arquitectónico.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/3E0cp5h.jpeg"><div class="portfolio-desc">Closet y mobiliario en panelería profesional.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/7gmOQe3.jpeg"><div class="portfolio-desc">Sobre firme industrial: piso para planta alimenticia.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/ZFaZKQt.jpeg"><div class="portfolio-desc">Remodelación de recámara con panel y luz led.</div></div>
+      <div class="portfolio-item"><img src="https://i.imgur.com/Ne8aRhM.jpeg"><div class="portfolio-desc">Centro de llenado de agua industrial y comercial.</div></div>
     </div>
   </section>
 
   <!-- CTA -->
   <div class="cta">
-    <h2>¿Listo para un proyecto sin límites?</h2>
+    <h2>¿Listo para transformar tu proyecto?</h2>
     <div class="cta-desc">
-      Solicita tu cotización personalizada con la <span>alianza Grupo AR + JARA</span> y haz realidad tu visión, desde lo industrial hasta lo arquitectónico.
+      Solicita tu cotización sin compromiso y haz tu idea realidad con <span>nuestro equipo integral</span>.
     </div>
     <a class="cta-btn" href="https://wa.me/524381346142?text=Hola%2C%20me%20interesa%20una%20cotizaci%C3%B3n%20con%20Grupo%20AR%20y%20JARA" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" class="cta-icon" alt="WhatsApp">Contactar por WhatsApp
+      <span class="cta-emoji">💬</span>Contactar por WhatsApp
     </a>
   </div>
 
+  <!-- FOOTER -->
   <div class="footer">
-    Grupo AR + JARA · Soluciones Integrales · Salamanca, Gto.<br>
+    Grupo AR · JARA · Construcción y Servicios Industriales<br>
+    Salamanca, Gto. · Presencia nacional<br>
     <a href="mailto:contacto.zolva@gmail.com">contacto.zolva@gmail.com</a> ·
     <a href="https://wa.me/524381346142">WhatsApp: +52 1 438 134 6142</a>
   </div>
-  <script>
-    // Carrusel Portfolio (scroll suave por tarjeta)
-    function scrollPortfolio(dir) {
-      const cont = document.getElementById('portfolio-carousel');
-      const card = cont.querySelector('.portfolio-item');
-      if(card){
-        const scroll = card.offsetWidth + 18;
-        cont.scrollBy({left: scroll * dir, behavior:'smooth'});
-      }
-    }
-  </script>
 </body>
 </html>
